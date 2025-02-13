@@ -1,0 +1,80 @@
+.introduction {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  width: 1284px;
+  height: 556px;
+  left: 105px;
+  top: 100px;
+  margin-bottom: 100px;
+
+  h2 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 64.8px;
+    color: #02f4bf;
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 82px;
+    font-weight: 700;
+    line-height: 98.4px;
+    color: #02f4bf;
+    white-space: nowrap;
+  }
+}
+
+.profilePic {
+  width: 539px;
+  height: 554px;
+}
+
+.arrowDown {
+  width: 22px;
+  height: 50px;
+  background-image: url("../../../assets/img/vec.png");
+  position: relative;
+  bottom: 240px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrowDown:hover {
+  background-image: url("../../../assets/img/hoverVec.png");
+}
+
+.arrowDown:hover::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 1px solid #02f4bf;
+  cursor: pointer;
+}
+
+.contactMe {
+  position: absolute;
+  border: 1px solid #02f4bf;
+  rotate: 270deg;
+  bottom: 277px;
+  text-decoration: none;
+  left: -40px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  padding-inline: 24px;
+  padding-block: 8px;
+  transition: color 0.2s ease-in-out;
+}
+
+.contactMe:hover {
+  cursor: pointer;
+  color: #02f4bf;
+}

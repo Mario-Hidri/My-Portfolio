@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  color: #e15544;
+}
+
+
+
+body {
+  background: linear-gradient(
+    180deg,
+    #13074e 50%,
+    rgba(29, 10, 121, 0.95) 100%
+  );
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Mono";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Mono";
+  font-style: Bold Italic;
+  font-weight: 700;
+  src: url("./assets/fonts/static/RobotoMono-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Handjet";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Handjet/static/Handjet-Regular.ttf")
+    format("truetype");
+}

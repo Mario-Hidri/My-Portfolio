@@ -1,0 +1,192 @@
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 1284px;
+  position: relative;
+  margin-top: 120px;
+  left: 105px;
+  gap: 100px;
+  height: 552px;
+}
+span {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #02f4bf;
+}
+
+h2 {
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57.6px;
+  text-align: right;
+}
+
+p {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  text-align: right;
+  color: #02f4bf;
+}
+
+.profPic2 {
+  width: 488px;
+  height: 530px;
+}
+
+.whyMe {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.iAmLocated {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  margin-left: 124px;
+
+  span {
+    margin-left: -50px;
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+
+  .locationMark {
+    position: relative;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+
+    img {
+      width: 33px;
+      height: 41px;
+      transition: transform 0.1s ease-in-out;
+    }
+
+    .locationEllipse {
+      width: 19px;
+      height: 7px;
+      background: url("../../../assets/img/elipse.svg") no-repeat center;
+      background-size: contain;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -4px;
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: translateY(-6px);
+      }
+      .locationEllipse {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.relocate {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 220px;
+}
+
+.suitcase {
+  display: flex;
+  align-items: center;
+  margin-left: 91px;
+  gap: 12px;
+}
+
+.suitcaseImg{
+    background-image: url("../../../assets/img/suitcase.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 50px;
+}
+
+.suitcaseImg:hover {
+  background-image: url("../../../assets/img/suitcaseHov.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.workRemote {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 280px;
+}
+
+.wifiSignal,
+.wifiSignalHover {
+    position: absolute;
+    top: -4px;
+    left: -24px;
+    width: 40px;
+    height: auto;
+}
+
+.wifiSignalHover {
+  opacity: 0; 
+
+}
+
+.laptop:hover .wifiSignal {
+  opacity: 0; 
+}
+
+.laptop:hover .wifiSignalHover {
+  opacity: 1; 
+}
+
+.laptop {
+  position: relative; 
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.laptopB{
+    height: 40px;
+    width: 40px;
+}
+
+
+button {
+  width: 169px;
+  height: 52px;
+  gap: 10px;
+  padding: 15px 30px 15px 30px;
+  margin-top: 20px;
+  background: #02f4bf;
+  color: #0b042d;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.6px;
+  align-self: flex-end;
+  border: none;
+
+  &:hover {
+    color: #e15544;
+    cursor: pointer;
+  }
+
+  // On click
+  // Scroll to: "Section Contact";
+  // Animate: Animate;
+  // animation-timing-function: ease-out;
+  // animation-duration: 300ms;
+}
