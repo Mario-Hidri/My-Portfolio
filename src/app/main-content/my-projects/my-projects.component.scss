@@ -1,0 +1,119 @@
+#polloLoco,
+#join {
+  display: flex;
+  align-items: center;
+  margin-left: 105px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  gap: 40px;
+  img {
+    width: 588px;
+    height: 371px;
+  }
+}
+
+.polloDescription,
+.joinDescription,
+.pokedexDescription {
+  gap: 40px;
+  height: 318px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #02f4bf;
+  }
+
+  span {
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25x;
+    color: #02f4bf;
+  }
+}
+
+
+
+#pokedex {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 260px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  gap: 50px;
+  img {
+    width: 588px;
+    height: 371px;
+  }
+}
+
+#liveTest {
+  width: 158px;
+  height: 52px;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  gap: 10px;
+  background-color: #02f4bf;
+  color: #0b042d;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+}
+
+#liveTest:hover {
+  color: #e15544;
+}
+
+#gitHub {
+  width: 98px;
+  height: 52px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  gap: 10px;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid #02f4bf;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+
+}
+
+#gitHub:hover {
+    color: #02f4bf;
+  }
+
+.buttonClass {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Roboto Mono";
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 64px;
+    color: #e15544;
+    margin-top: 100px;
+  }
+  
