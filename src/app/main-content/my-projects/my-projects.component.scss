@@ -39,13 +39,21 @@
   }
 }
 
+.pokedexDescription{
+  display: flex;
+  align-items: flex-end;
+  h2{
+    display: flex;
+   justify-content: flex-end;
+  }
+}
+
 
 
 #pokedex {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-right: 260px;
   margin-top: 60px;
   margin-bottom: 60px;
   gap: 50px;
