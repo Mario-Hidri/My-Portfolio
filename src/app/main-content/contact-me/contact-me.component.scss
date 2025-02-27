@@ -1,4 +1,7 @@
-/* Style inputs with type="text", select elements and textareas */
+section {
+  padding-top: 92px;
+}
+
 select,
 textarea {
   width: 100%;
@@ -16,7 +19,7 @@ textarea {
   max-width: 1440px;
   margin-top: 12px;
   font-family: "Roboto Mono";
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .form-container {
@@ -36,7 +39,6 @@ textarea {
 /* Input Fields (Name & Email) */
 input[type="text"],
 input[type="email"] {
-  width: 507px;
   height: 56px;
   border: 1.5px solid #02f4bf;
   background: transparent;
@@ -175,8 +177,9 @@ input[type="submit"]:hover {
 
   p {
     color: #02f4bf;
+    flex: 1;
   }
-  a{
+  a {
     text-decoration: none;
   }
 }
@@ -187,16 +190,16 @@ input[type="submit"]:hover {
   align-items: center;
   gap: 12px;
   margin-top: 4px;
-  cursor: pointer; 
-
+  cursor: pointer;
 }
 
-.phoneImg, .emailImg {
+.phoneImg,
+.emailImg {
   background-size: contain;
   background-repeat: no-repeat;
   height: 21px;
   width: 21px;
-  transition: background-image 0.1s ease-in-out; 
+  transition: background-image 0.1s ease-in-out;
 }
 
 .phoneImg {
@@ -217,10 +220,9 @@ input[type="submit"]:hover {
 
 .email:hover a,
 .phone:hover a {
-  color: #02F4BF;
+  color: #02f4bf;
   transition: color 0.1s ease-in-out;
 }
-
 
 .arrowUpContact {
   background-image: url("../../../assets/img/arrowUpContact.svg");
@@ -246,10 +248,17 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
+.contactButton {
+  display: flex;
+  justify-content: flex-end;  
+}
+
 .spaceBetween {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex: 1;
+  margin-left: 90px;
   a {
     color: #02f4bf;
   }
@@ -278,5 +287,26 @@ section {
 
   .privacy label {
     white-space: normal;
+  }
+
+  /* Error messages */
+  .error {
+    color: red;
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* Align error messages perfectly below input fields */
+  input.ng-invalid.ng-touched,
+  textarea.ng-invalid.ng-touched {
+    border-color: red;
+  }
+
+  /* Checkbox validation */
+  .privacy .error {
+    margin-top: 5px;
+    font-size: 14px;
   }
 }

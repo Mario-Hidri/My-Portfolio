@@ -1,70 +1,103 @@
-<section>
+<section id="contactMe">
   <div class="contactMeName">
-    <h1>Contact Me</h1>
+    <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
     <img src="../../../assets/img/ArrowContact.svg" alt="" />
   </div>
 
   <div class="emailAndPhone">
     <p>
-      Still not sure if I am the right person for <br />your project? <br />
-      Contact me so I can reassure you. <br />
-      Let us work together.
+      {{ 'CONTACT.DESCRIPTION' | translate }}
     </p>
 
     <div class="spaceBetween">
       <div class="email">
         <div class="emailImg"></div>
-        
-        <a href="mailto:mariohidri2014@yahoo.com"
-          >E-Mail: mariohidri2014&#64;yahoo.com</a
-        >
+        <a href="mailto:mariohidri2014@yahoo.com">
+          {{ 'CONTACT.EMAIL' | translate }}: mariohidri2014&#64;yahoo.com
+        </a>
       </div>
 
       <div class="phone">
         <div class="phoneImg"></div>
-        <a href="tel:+4917662095211">Phone: +49 176 620 952 11</a>
+        <a href="tel:+4917662095211">
+          {{ 'CONTACT.PHONE' | translate }}: +49 176 620 952 11
+        </a>
       </div>
     </div>
 
-    <div class="arrowUpContact"></div>
+    <a href="#header"><div class="arrowUpContact"></div></a>
   </div>
 
   <div class="container">
-    <form>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-container">
         <div class="left">
+          <!-- Name Input -->
           <input
+            [(ngModel)]="contactData.name"
+            #name="ngModel"
+            required
             type="text"
-            id="fname"
-            name="firstname"
-            placeholder="  Your name.."
+            id="name"
+            name="name"
+            [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
           />
+          @if (!name.valid && name.touched) {
+          <span class="error">{{ 'CONTACT.ERROR_NAME' | translate }}</span>
+          }
 
+          <!-- Email Input -->
           <input
+            [(ngModel)]="contactData.email"
+            #email="ngModel"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             type="email"
             id="email"
             name="email"
-            placeholder="  Your email.."
+            [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
           />
+          @if (!email.valid && email.touched) {
+          <span class="error">{{ 'CONTACT.ERROR_EMAIL' | translate }}</span>
+          }
         </div>
 
         <div class="right">
+          <!-- Message Input -->
           <textarea
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            required
             id="message"
             name="message"
-            placeholder="Write something.."
+            [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
           ></textarea>
+          @if (!message.valid && message.touched) {
+          <span class="error">{{ 'CONTACT.ERROR_MESSAGE' | translate }}</span>
+          }
         </div>
       </div>
 
+      <!-- Privacy Checkbox -->
       <div class="privacy">
-        <input type="checkbox" id="privacy" name="privacy" />
+        <input
+          type="checkbox"
+          id="privacy"
+          name="privacy"
+          #privacy="ngModel"
+          [(ngModel)]="contactData.privacy"
+          required
+        />
         <label for="privacy">
-          I've read the <a href="#">privacy policy</a> and agree to the
-          processing of my data as outlined.
+          {{ 'CONTACT.PRIVACY_POLICY' | translate }} <a href="#">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>.
         </label>
-        <input type="submit" value="Send" />
       </div>
+
+      @if (!privacy.valid && privacy.touched) {
+      <span class="error">{{ 'CONTACT.ERROR_PRIVACY' | translate }}</span>
+      }
+
+      <div class="contactButton"><input type="submit" [value]="'CONTACT.SEND_BUTTON' | translate" [disabled]="!contactForm.valid" /></div>
     </form>
   </div>
 </section>

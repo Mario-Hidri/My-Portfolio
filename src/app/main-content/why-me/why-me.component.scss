@@ -4,10 +4,11 @@ section {
   justify-content: space-around;
   width: 1284px;
   position: relative;
-  margin-top: 120px;
+  margin-top: 100px;
   left: 105px;
   gap: 100px;
   height: 552px;
+  padding-top: 92px;
 }
 span {
   font-family: "Roboto Mono";
@@ -15,6 +16,12 @@ span {
   font-size: 18px;
   line-height: 21.6px;
   color: #02f4bf;
+}
+
+.contactButton {
+  display: flex;
+  justify-content: flex-end; 
+  text-decoration: none; 
 }
 
 h2 {

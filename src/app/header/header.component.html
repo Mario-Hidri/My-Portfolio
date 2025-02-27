@@ -1,16 +1,18 @@
-<nav>
-  <div class="navTags">
-    <h2 class="logo "> &lt;MH&gt;</h2>
+<header id="header">
+  <nav>
+    <div class="navTags">
+      <h2 class="logo">&lt;MH&gt;</h2>
 
-    <a href="">About Me</a>
-    <a href="">Skills</a>
-    <a href="">Projects</a>
-    <a href="">Contact</a>
-  </div>
+      <a href="#whyMe">{{ 'NAV.WHY_ME' | translate }}</a>
+      <a href="#mySkills">{{ 'NAV.SKILLS' | translate }}</a>
+      <a href="#projects">{{ 'NAV.PROJECTS' | translate }}</a>
+      <a href="#contactMe">{{ 'NAV.CONTACT' | translate }}</a>
+    </div>
 
-  <div class="flex">
-    <a href="">DE</a>
-    <span class="languageSeperator">|</span>
-    <a href="">EN</a>
-  </div>
-</nav>
+    <div class="flex">
+      <a (click)="changeLanguage('de')">DE</a>
+      <span class="languageSeperator">|</span>
+      <a (click)="changeLanguage('en')">EN</a>
+    </div>
+  </nav>
+</header>

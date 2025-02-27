@@ -1,0 +1,81 @@
+{
+  "FOOTER": {
+    "ROLE": "Frontend Developer",
+    "COPYRIGHT": "Mario Hidri 2025",
+    "LEGAL_NOTICE": "Legal Notice",
+    "PRIVACY_POLICY": "Privacy Policy"
+  },
+  "NAV": {
+    "WHY_ME": "Why Me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "CONTACT": {
+    "TITLE": "Contact Me",
+    "DESCRIPTION": "Still not sure if I am the right person for your project? Contact me so I can reassure you. Let us work together.",
+    "EMAIL": "E-Mail",
+    "PHONE": "Phone",
+    "NAME_PLACEHOLDER": "   Your name",
+    "EMAIL_PLACEHOLDER": "   Your email",
+    "MESSAGE_PLACEHOLDER": "Your message",
+    "PRIVACY_POLICY": "I've read the",
+    "PRIVACY_LINK": "privacy policy",
+    "ERROR_NAME": "Please enter your name",
+    "ERROR_EMAIL": "Please enter a valid email",
+    "ERROR_MESSAGE": "Please enter a message",
+    "ERROR_PRIVACY": "You must agree to the privacy policy",
+    "SEND_BUTTON": "Send"
+  },
+  "INTRO": {
+    "JOB_TITLE": "Frontend Developer",
+    "NAME": "Mario Hidri",
+    "CONTACT_BUTTON": "Contact Me"
+  },
+  "PROJECTS": {
+    "TITLE": "My Projects",
+    "GITHUB": "GitHub",
+    "LIVE": "Live Test",
+    "POLLO": {
+      "NAME": "Pollo Loco",
+      "TECH": "JavaScript | HTML | CSS",
+      "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    },
+    "POKEDEX": {
+      "NAME": "Pokédex",
+      "TECH": "JavaScript | HTML | CSS | API",
+      "DESCRIPTION": "Explore, search, and view Pokémon stats using an API-based interface. Discover each Pokémon's abilities and traits with an interactive and user-friendly design."
+    },
+    "JOIN": {
+      "NAME": "Join",
+      "TECH": "JavaScript | HTML | CSS | Firebase",
+      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    }
+  },
+  "SKILLS": {
+    "TITLE": "My Skills",
+    "ANGULAR": "Angular",
+    "TYPESCRIPT": "TypeScript",
+    "JAVASCRIPT": "JavaScript",
+    "HTML": "HTML",
+    "CSS": "CSS",
+    "REST_API": "Rest-Api",
+    "FIREBASE": "Firebase",
+    "GIT": "GIT",
+    "SCRUM": "Scrum",
+    "MATERIAL": "Material Design",
+    "CHALLENGE": {
+      "TITLE": "Challenge Me",
+      "DESCRIPTION": "I'm always happy to learn new technologies, just tell me what you need."
+    }
+  },
+  "WHY_ME": {
+    "TITLE": "Why Me",
+    "DESCRIPTION": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member of your team.",
+    "I_AM": "I am",
+    "LOCATED": "located in Frankfurt",
+    "RELOCATE": "open to relocate",
+    "WORK_REMOTE": "open to work remote",
+    "BUTTON": "Let's Talk"
+  }
+}

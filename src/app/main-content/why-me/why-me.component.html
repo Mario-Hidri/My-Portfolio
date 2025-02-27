@@ -1,49 +1,40 @@
-<section>
+<section id="whyMe">
   <img class="profPic2" src="../../../assets/img/pic2.png" alt="me" />
 
   <div class="whyMe">
-    <h2>Why Me</h2>
-    <p>
-      I am motivated to continuously learn new technologies and develop myself.
-      My ability to solve complex problems and my passion for programming make
-      me a valuable member of your team.
-    </p>
+    <h2>{{ 'WHY_ME.TITLE' | translate }}</h2>
+    <p>{{ 'WHY_ME.DESCRIPTION' | translate }}</p>
+
     <div class="iAmLocated">
-      <h2>I am</h2>
+      <h2>{{ 'WHY_ME.I_AM' | translate }}</h2>
       <div class="locationMark">
         <img src="../../../assets/img/location.svg" alt="location" />
         <div class="locationEllipse"></div>
       </div>
-      <span>located <br />in Frankfurt</span>
+      <span>{{ 'WHY_ME.LOCATED' | translate }}</span>
     </div>
+
     <div class="relocate">
       <img src="../../../assets/img/arrow3.svg" alt="arrow" />
       <div class="suitcase">
         <div class="suitcaseImg"></div>
-        <span>open to <br />relocate</span>
+        <span>{{ 'WHY_ME.RELOCATE' | translate }}</span>
       </div>
     </div>
+
     <div class="workRemote">
       <div class="laptop">
         <img class="laptopB" src="../../../assets/img/laptop.svg" alt="">
         <img class="wifiSignal" src="../../../assets/img/WIFI.svg" alt="" />
-        <img
-          class="wifiSignalHover"
-          src="../../../assets/img/WIFI1.svg"
-          alt=""
-        />
-        <span
-          >open to <br />
-          work remote</span
-        >
+        <img class="wifiSignalHover" src="../../../assets/img/WIFI1.svg" alt="" />
+        <span>{{ 'WHY_ME.WORK_REMOTE' | translate }}</span>
       </div>
 
-      <img src="../../../assets/img/arrow2.svg" alt="arrow" /><img
-        src="arrow"
-        alt=""
-      />
+      <img src="../../../assets/img/arrow2.svg" alt="arrow" />
       <img src="../../../assets/img/arrow1.svg" alt="" />
     </div>
-    <button>Lets Talk</button>
-  </div>
+
+<a class="contactButton" href="#contactMe">
+  <button>{{ 'WHY_ME.BUTTON' | translate }}</button>
+</a>  </div>
 </section>

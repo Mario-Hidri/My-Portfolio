@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.services';
+import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslateModule],
+
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  constructor(private languageService: LanguageService) {}
 
+  changeLanguage(lang: string): void {
+    this.languageService.changeLanguage(lang);
+  }
 }

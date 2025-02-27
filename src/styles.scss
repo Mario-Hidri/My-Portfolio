@@ -6,6 +6,9 @@
   scroll-behavior: smooth;
   color: #e15544;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   width: 1440px;
@@ -27,6 +30,19 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
+
+.logo {
+  font-family: "Handjet", cursive;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.05em;
+  color: #e15544;
+  margin-right: 20px;
+  margin-left: 120px;
+}
+
 
 
 @font-face {
