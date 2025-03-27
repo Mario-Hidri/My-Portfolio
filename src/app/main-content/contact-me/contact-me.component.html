@@ -89,8 +89,12 @@
           required
         />
         <label for="privacy">
-          {{ 'CONTACT.PRIVACY_POLICY' | translate }} <a href="#">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>.
+          {{ 'CONTACT.PRIVACY_POLICY' | translate }}
+          <a [href]="privacyPolicyUrl" target="_blank">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>.
         </label>
+        
+        
+        
       </div>
 
       @if (!privacy.valid && privacy.touched) {

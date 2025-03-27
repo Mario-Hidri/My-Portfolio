@@ -17,8 +17,7 @@ nav {
   background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%);
   width: 100vw;
   z-index: 999;
-  max-width: 1440px;
-
+  max-width: 1600px;
 }
 
 a {
@@ -42,6 +41,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 100px;
 
 }
 

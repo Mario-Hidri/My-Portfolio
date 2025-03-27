@@ -10,7 +10,7 @@ import { LanguageService } from './services/language.services';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, MainContentComponent, FooterComponent, TranslateModule],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

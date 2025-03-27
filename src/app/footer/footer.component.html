@@ -10,8 +10,8 @@
       <h2>{{ 'FOOTER.COPYRIGHT' | translate }}</h2>
     </div>
     <div class="e123">
-      <a href="#">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
-      <a href="#">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
+      <a [href]="legalNotice" target="_blank">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
+      <a [href]="privacyPolicyUrl" target="_blank">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
     </div>
   </div>
 
