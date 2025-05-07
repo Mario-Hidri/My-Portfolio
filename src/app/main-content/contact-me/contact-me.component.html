@@ -1,31 +1,37 @@
 <section id="contactMe">
   <div class="contactMeName">
-    <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
+    <h1>{{ "CONTACT.TITLE" | translate }}</h1>
     <img src="../../../assets/img/ArrowContact.svg" alt="" />
   </div>
 
   <div class="emailAndPhone">
     <p>
-      {{ 'CONTACT.DESCRIPTION' | translate }}
+      {{ "CONTACT.DESCRIPTION" | translate }}
     </p>
 
     <div class="spaceBetween">
       <div class="email">
         <div class="emailImg"></div>
         <a href="mailto:mariohidri2014@yahoo.com">
-          {{ 'CONTACT.EMAIL' | translate }}: mariohidri2014&#64;yahoo.com
+          {{ "CONTACT.EMAIL" | translate }}: mariohidri2014&#64;yahoo.com
         </a>
       </div>
 
       <div class="phone">
         <div class="phoneImg"></div>
         <a href="tel:+4917662095211">
-          {{ 'CONTACT.PHONE' | translate }}: +49 176 620 952 11
+          {{ "CONTACT.PHONE" | translate }}: +49 176 620 952 11
         </a>
       </div>
     </div>
 
     <a href="#header"><div class="arrowUpContact"></div></a>
+  </div>
+
+  <div class="emailAndPhone1">
+    <p>
+      {{ "CONTACT.DESCRIPTION" | translate }}
+    </p>
   </div>
 
   <div class="container">
@@ -43,7 +49,7 @@
             [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
           />
           @if (!name.valid && name.touched) {
-          <span class="error">{{ 'CONTACT.ERROR_NAME' | translate }}</span>
+          <span class="error">{{ "CONTACT.ERROR_NAME" | translate }}</span>
           }
 
           <!-- Email Input -->
@@ -58,7 +64,7 @@
             [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
           />
           @if (!email.valid && email.touched) {
-          <span class="error">{{ 'CONTACT.ERROR_EMAIL' | translate }}</span>
+          <span class="error">{{ "CONTACT.ERROR_EMAIL" | translate }}</span>
           }
         </div>
 
@@ -73,7 +79,7 @@
             [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
           ></textarea>
           @if (!message.valid && message.touched) {
-          <span class="error">{{ 'CONTACT.ERROR_MESSAGE' | translate }}</span>
+          <span class="error">{{ "CONTACT.ERROR_MESSAGE" | translate }}</span>
           }
         </div>
       </div>
@@ -88,20 +94,48 @@
           [(ngModel)]="contactData.privacy"
           required
         />
-        <label for="privacy">
-          {{ 'CONTACT.PRIVACY_POLICY' | translate }}
-          <a [href]="privacyPolicyUrl" target="_blank">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>.
+        <label>
+          {{ "CONTACT.PRIVACY_PREFIX" | translate }}
+          <a href="/privacy-policy" target="_blank">
+            {{ "CONTACT.PRIVACY_LINK" | translate }}
+          </a>
+          {{ "CONTACT.PRIVACY_SUFFIX" | translate }}
         </label>
-        
-        
-        
       </div>
 
       @if (!privacy.valid && privacy.touched) {
-      <span class="error">{{ 'CONTACT.ERROR_PRIVACY' | translate }}</span>
+      <span class="error">{{ "CONTACT.ERROR_PRIVACY" | translate }}</span>
       }
 
-      <div class="contactButton"><input type="submit" [value]="'CONTACT.SEND_BUTTON' | translate" [disabled]="!contactForm.valid" /></div>
+      <div class="contactButton">
+        <input
+          type="submit"
+          [value]="'CONTACT.SEND_BUTTON' | translate"
+          [disabled]="!contactForm.valid"
+        />
+      </div>
     </form>
+
   </div>
+
+  <div class="emailAndPhoneMobile">
+    <a href="#header"><div class="arrowUpContact1"></div></a>
+    
+    <div class="spaceBetween">
+      <div class="email">
+        <div class="emailImg"></div>
+        <a href="mailto:mariohidri2014@yahoo.com">
+          mariohidri2014&#64;yahoo.com
+        </a>
+      </div>
+
+      <div class="phone">
+        <div class="phoneImg"></div>
+        <a href="tel:+4917662095211">
+        +49 176 620 952 11
+        </a>
+      </div>
+    </div>
+  </div>
+
 </section>

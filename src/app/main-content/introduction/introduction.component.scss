@@ -29,7 +29,8 @@
 
 .profilePic {
   width: 539px;
-  height: 554px;
+  height: 602px;
+  margin-left: 24px;
 }
 
 .arrowDown {
@@ -76,4 +77,37 @@
 .contactMe:hover {
   cursor: pointer;
   color: #02f4bf;
+}
+
+@media (max-width: 1300px) {
+  #introduction {
+    width: 1140px;
+  }
+}
+
+@media (max-width: 1270px) {
+  #introduction {
+    left: 40px;
+  }
+}
+
+@media (max-width: 770px) {
+  #introduction {
+    flex-direction: column-reverse;
+    align-items: center;
+    top: 140px;
+    left: 55px;
+  }
+
+  .arrowDown{
+    display: none;
+  }
+
+  .contactMe{
+    display: none;
+  }
+
+  .profilePic{
+    margin-bottom: 20px;
+  }
 }

@@ -3,10 +3,17 @@
     <div class="navTags">
       <h2 class="logo">&lt;MH&gt;</h2>
 
-      <a href="#whyMe">{{ 'NAV.WHY_ME' | translate }}</a>
-      <a href="#mySkills">{{ 'NAV.SKILLS' | translate }}</a>
-      <a href="#projects">{{ 'NAV.PROJECTS' | translate }}</a>
-      <a href="#contactMe">{{ 'NAV.CONTACT' | translate }}</a>
+      <a href="#whyMe">{{ "NAV.WHY_ME" | translate }}</a>
+      <a href="#mySkills">{{ "NAV.SKILLS" | translate }}</a>
+      <a href="#projects">{{ "NAV.PROJECTS" | translate }}</a>
+      <a href="#contactMe">{{ "NAV.CONTACT" | translate }}</a>
+
+      <img
+        class="none"
+        src="../../assets/img/burgerMenu.svg"
+        alt="burger menu"
+        (click)="toggleMenu()"
+      />
     </div>
 
     <div class="flex">
@@ -15,4 +22,31 @@
       <a (click)="changeLanguage('en')">EN</a>
     </div>
   </nav>
+
+  <div class="mobileMenu" [class.open]="isMenuOpen">
+    <div class="mobileMenuHeader">
+      <h2 class="logo">&lt;MH&gt;</h2>
+      <img
+        src="../../assets/img/x.svg"
+        alt="close menu"
+        class="closeIcon"
+        (click)="toggleMenu()"
+      />
+    </div>
+  
+    <div class="mobileMenuLinks">
+      <a href="#whyMe" (click)="toggleMenu()">{{ "NAV.WHY_ME" | translate }}</a>
+      <a href="#mySkills" (click)="toggleMenu()">{{ "NAV.SKILLS" | translate }}</a>
+      <a href="#projects" (click)="toggleMenu()">{{ "NAV.PROJECTS" | translate }}</a>
+      <a href="#contactMe" (click)="toggleMenu()">{{ "NAV.CONTACT" | translate }}</a>
+  
+      <div class="languageSwitcher">
+        <a (click)="changeLanguage('de')">DE</a>
+        <span class="languageSeperator">|</span>
+        <a (click)="changeLanguage('en')">EN</a>
+      </div>
+    </div>
+  </div>
+  
+
 </header>

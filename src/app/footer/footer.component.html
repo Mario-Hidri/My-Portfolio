@@ -1,26 +1,61 @@
 <footer>
   <div class="frontFooter">
     <h2 class="logo">&lt;MH&gt;</h2>
-    <span>{{ 'FOOTER.ROLE' | translate }}</span>
+    <span>{{ "FOOTER.ROLE" | translate }}</span>
   </div>
 
   <div class="middleFooter">
     <div class="middleFooterChild">
       <h3 class="middleFooterSymbol">C</h3>
-      <h2>{{ 'FOOTER.COPYRIGHT' | translate }}</h2>
+      <h2>{{ "FOOTER.COPYRIGHT" | translate }}</h2>
     </div>
     <div class="e123">
-      <a [href]="legalNotice" target="_blank">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
-      <a [href]="privacyPolicyUrl" target="_blank">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
+      <a [href]="legalNotice" target="_blank">{{
+        "FOOTER.LEGAL_NOTICE" | translate
+      }}</a>
+      <a [href]="privacyPolicyUrl" target="_blank">{{
+        "FOOTER.PRIVACY_POLICY" | translate
+      }}</a>
     </div>
   </div>
 
   <div class="endFooter">
-    <a href="https://github.com/Mario-Hidri" target="_blank"><div class="gitImg"></div></a>
+    <a href="https://github.com/Mario-Hidri" target="_blank"
+      ><div class="gitImg"></div
+    ></a>
     <a href="mailto:mariohidri2014@yahoo.com"><div class="emailImg"></div></a>
     <a
-      href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.730830873565_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9044422&mcid=6935667189886640128&cid=&gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYqQ6OscPICrpCtxcREznvpSiaJqmTa6EKKvW-GqcbLKq5eiqIYzRUUaAvXwEALw_wcB&gclsrc=aw.ds" target="_blank">
+      href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.730830873565_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9044422&mcid=6935667189886640128&cid=&gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYqQ6OscPICrpCtxcREznvpSiaJqmTa6EKKvW-GqcbLKq5eiqIYzRUUaAvXwEALw_wcB&gclsrc=aw.ds"
+      target="_blank"
+    >
       <div class="linkedInImg"></div>
     </a>
+  </div>
+</footer>
+
+<footer class="footer-mobile">
+  <div class="footer-icons">
+    <a
+      href="https://github.com/Mario-Hidri"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="gitImg"
+    ></a>
+    <a href="mailto:mariohidri2014@yahoo.com" class="emailImg"></a>
+    <a
+      href="https://de.linkedin.com/?src=go-pa&trk=sem-ga_campid.17342682713_asid.148803897556_crid.730830873565_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9044422&mcid=6935667189886640128&cid=&gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYqQ6OscPICrpCtxcREznvpSiaJqmTa6EKKvW-GqcbLKq5eiqIYzRUUaAvXwEALw_wcB&gclsrc=aw.ds"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="linkedInImg"
+    ></a>
+  </div>
+  <div class="gap4px">
+    <div class="footer-logo">&lt;MH&gt;</div>
+    <div class="footer-copy">&copy; Mario Hidri 2025</div>
+  </div>
+
+  <div class="footer-links gap4px">
+    <a [href]="legalNotice">Legal notice</a>
+    <a [href]="privacyPolicyUrl">Impressum</a>
   </div>
 </footer>

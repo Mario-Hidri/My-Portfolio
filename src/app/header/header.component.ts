@@ -14,7 +14,13 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   constructor(private languageService: LanguageService) {}
 
+  isMenuOpen = false;
+
   changeLanguage(lang: string): void {
     this.languageService.changeLanguage(lang);
+  }
+
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

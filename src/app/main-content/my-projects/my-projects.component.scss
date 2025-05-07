@@ -39,16 +39,14 @@
   }
 }
 
-.pokedexDescription{
+.pokedexDescription {
   display: flex;
   align-items: flex-end;
-  h2{
+  h2 {
     display: flex;
-   justify-content: flex-end;
+    justify-content: flex-end;
   }
 }
-
-
 
 #pokedex {
   display: flex;
@@ -102,12 +100,11 @@
   background-color: transparent;
   cursor: pointer;
   transition: color 0.4s ease-in-out;
-
 }
 
 #gitHub:hover {
-    color: #02f4bf;
-  }
+  color: #02f4bf;
+}
 
 .buttonClass {
   display: flex;
@@ -116,12 +113,72 @@
 }
 
 h1 {
-    text-align: center;
-    font-family: "Roboto Mono";
-    font-weight: 500;
-    font-size: 54px;
-    line-height: 64px;
-    color: #e15544;
-    padding-top: 92px;
+  text-align: center;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 64px;
+  color: #e15544;
+  padding-top: 92px;
+}
+
+@media (max-width: 1300px) {
+  section {
+    width: 1140px;
   }
-  
+  h1 {
+    width: 1140px;
+    margin-left: 40px;
+  }
+  #pokedex {
+    margin-left: 105px;
+  }
+}
+
+@media (max-width: 1300px) {
+  #polloLoco {
+    margin-left: 40px;
+  }
+
+  #join {
+    margin-left: 40px;
+  }
+
+  #pokedex {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 770px) {
+  #projects {
+    padding-top: 600px;
+  }
+
+  #pokedex,
+  #join,
+  #polloLoco {
+    flex-direction: column-reverse;
+  }
+
+  .polloDescription {
+    align-items: center;
+  }
+
+  .pokedexDescription {
+    align-items: center;
+  }
+
+  .pokedexDescription h2 {
+    justify-content: center;
+  }
+
+  .joinDescription {
+    display: flex;
+    align-items: center;
+  }
+
+  .joinDescription h2 {
+    display: flex;
+    justify-content: center;
+  }
+}

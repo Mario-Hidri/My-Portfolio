@@ -1,61 +1,77 @@
 <section id="mySkills">
-  <h1>{{ 'SKILLS.TITLE' | translate }}</h1>
+  <h1>{{ "SKILLS.TITLE" | translate }}</h1>
 
-  <div class="listedSkills">
-    <div class="flexVertical">
-      <img src="../../../assets/img/Angular.svg" alt="" />
-      <span>{{ 'SKILLS.ANGULAR' | translate }}</span>
-    </div>
-    <div class="flexVertical">
-      <img src="../../../assets/img/TypeScript.svg" alt="" />
-      <span>{{ 'SKILLS.TYPESCRIPT' | translate }}</span>
-    </div>
-    <div class="flexVertical">
-      <img src="../../../assets/img/Javascript.svg" alt="" />
-      <span>{{ 'SKILLS.JAVASCRIPT' | translate }}</span>
-    </div>
-    <div class="flexVertical">
-      <img src="../../../assets/img/html.svg" alt="" />
-      <span>{{ 'SKILLS.HTML' | translate }}</span>
-    </div>
-    <div class="flexVertical">
-      <img src="../../../assets/img/CSS.svg" alt="" />
-      <span>{{ 'SKILLS.CSS' | translate }}</span>
-    </div>
-    <div class="flexVertical">
-      <img src="../../../assets/img/Api.svg" alt="" />
-      <span>{{ 'SKILLS.REST_API' | translate }}</span>
-    </div>
-  </div>
-
-  <div class="listedSkills2">
-    <div class="flexVertical">
-      <img src="../../../assets/img/Firebase.svg" alt="" />
-      <span>{{ 'SKILLS.FIREBASE' | translate }}</span>
+  <div class="allSkillsContainer">
+    <div class="listedSkills">
+      <div class="flexVertical">
+        <img src="../../../assets/img/Angular.svg" alt="" />
+        <span>{{ "SKILLS.ANGULAR" | translate }}</span>
+      </div>
+      <div class="flexVertical">
+        <img src="../../../assets/img/TypeScript.svg" alt="" />
+        <span>{{ "SKILLS.TYPESCRIPT" | translate }}</span>
+      </div>
+      <div class="flexVertical">
+        <img src="../../../assets/img/Javascript.svg" alt="" />
+        <span>{{ "SKILLS.JAVASCRIPT" | translate }}</span>
+      </div>
+      <div class="flexVertical">
+        <img src="../../../assets/img/html.svg" alt="" />
+        <span>{{ "SKILLS.HTML" | translate }}</span>
+      </div>
+      <div class="flexVertical">
+        <img src="../../../assets/img/CSS.svg" alt="" />
+        <span>{{ "SKILLS.CSS" | translate }}</span>
+      </div>
+      <div class="flexVertical">
+        <img src="../../../assets/img/Api.svg" alt="" />
+        <span>{{ "SKILLS.REST_API" | translate }}</span>
+      </div>
     </div>
 
-    <div class="flexVertical">
-      <img src="../../../assets/img/git.svg" alt="" />
-      <span>{{ 'SKILLS.GIT' | translate }}</span>
-    </div>
+    <div class="listedSkills2">
+      <div class="flexVertical">
+        <img src="../../../assets/img/Firebase.svg" alt="" />
+        <span>{{ "SKILLS.FIREBASE" | translate }}</span>
+      </div>
 
-    <div class="flexVertical">
-      <img src="../../../assets/img/scrum.svg" alt="" />
-      <span>{{ 'SKILLS.SCRUM' | translate }}</span>
-    </div>
-    <div class="flexVertical">
-      <img src="../../../assets/img/Icons.svg" alt="" />
-      <span>{{ 'SKILLS.MATERIAL' | translate }}</span>
-    </div>
+      <div class="flexVertical">
+        <img src="../../../assets/img/git.svg" alt="" />
+        <span>{{ "SKILLS.GIT" | translate }}</span>
+      </div>
 
+      <div class="flexVertical">
+        <img src="../../../assets/img/scrum.svg" alt="" />
+        <span>{{ "SKILLS.SCRUM" | translate }}</span>
+      </div>
+      <div class="flexVertical">
+        <img src="../../../assets/img/Icons.svg" alt="" />
+        <span>{{ "SKILLS.MATERIAL" | translate }}</span>
+      </div>
+
+      <div>
+        <div class="secretBox1">
+          <div class="flexVertical">
+            <img src="../../../assets/img/secret.svg" alt="" />
+            <span>{{ "SKILLS.CHALLENGE.TITLE" | translate }}</span>
+          </div>
+          <p>{{ "SKILLS.CHALLENGE.DESCRIPTION" | translate }}</p>
+        </div>
+      </div>
+    </div>
     <div>
       <div class="secretBox">
         <div class="flexVertical">
           <img src="../../../assets/img/secret.svg" alt="" />
-          <span>{{ 'SKILLS.CHALLENGE.TITLE' | translate }}</span>
+          <img src="../../../assets/img/arrow6.svg" alt="Arrow" class="arrow" />
+          <span>{{ "SKILLS.CHALLENGE.TITLE" | translate }}</span>
         </div>
-        <p>{{ 'SKILLS.CHALLENGE.DESCRIPTION' | translate }}</p>
+        <p>{{ "SKILLS.CHALLENGE.DESCRIPTION" | translate }}</p>
       </div>
     </div>
   </div>
+
+  <a class="contactButton cloneButton" href="#contactMe">
+    <button>{{ "WHY_ME.BUTTON" | translate }}</button>
+  </a>
 </section>

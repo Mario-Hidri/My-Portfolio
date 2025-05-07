@@ -1,5 +1,5 @@
 section {
-  padding-top: 92px;
+  padding-top: 12px;
 }
 
 select,
@@ -14,7 +14,6 @@ textarea {
   resize: vertical;
 }
 
-/* General Styling */
 .container {
   max-width: 1440px;
   margin-top: 12px;
@@ -28,7 +27,6 @@ textarea {
   justify-content: space-between;
 }
 
-/* Left & Right Sections */
 .left,
 .right {
   flex: 1;
@@ -36,7 +34,6 @@ textarea {
   flex-direction: column;
 }
 
-/* Input Fields (Name & Email) */
 input[type="text"],
 input[type="email"] {
   height: 56px;
@@ -52,7 +49,6 @@ input::placeholder {
   color: #02f4bf;
 }
 
-/* Textarea (Message) */
 textarea {
   width: 637px;
   height: 144px;
@@ -65,7 +61,6 @@ textarea {
   margin-top: 8px;
 }
 
-/* Privacy Policy Section */
 .privacy {
   display: flex;
   align-items: center;
@@ -132,7 +127,6 @@ input[type="submit"] {
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
-
   width: 104px !important;
   height: 52px !important;
   padding-top: 15px;
@@ -164,6 +158,18 @@ input[type="submit"]:hover {
   }
 }
 
+.arrowUpContact1 {
+  background-image: url("../../../assets/img/arrowUpContact.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 22px;
+  display: flex;
+  align-self: flex-end !important;
+  position: absolute;
+  // right: -300px;
+}
+
 .emailAndPhone {
   display: flex;
   align-items: center;
@@ -181,6 +187,31 @@ input[type="submit"]:hover {
   }
   a {
     text-decoration: none;
+  }
+}
+
+.emailAndPhoneMobile {
+  display: none;
+  width: 500px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.emailAndPhone1 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: justify;
+
+  p {
+    color: #02f4bf;
+    flex: 1;
+    width: 700px;
   }
 }
 
@@ -250,7 +281,7 @@ input[type="submit"]:hover {
 
 .contactButton {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
 }
 
 .spaceBetween {
@@ -268,8 +299,27 @@ section {
   margin-left: 105px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
+  .emailAndPhone {
+    width: 1140px;
+  }
+
+  .container {
+    width: 1140px;
+  }
+
+  .contactMeName {
+    width: 1140px;
+  }
+}
+
+@media (max-width: 1270px) {
+  section {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 770px) {
   .form-container {
     flex-direction: column;
   }
@@ -298,15 +348,94 @@ section {
     display: block;
   }
 
-  /* Align error messages perfectly below input fields */
   input.ng-invalid.ng-touched,
   textarea.ng-invalid.ng-touched {
     border-color: red;
   }
 
-  /* Checkbox validation */
   .privacy .error {
     margin-top: 5px;
     font-size: 14px;
   }
+
+  .emailAndPhone {
+    display: none !important;
+  }
+
+  .emailAndPhone1 {
+    display: flex;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .contactMeName img {
+    display: none;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 700px;
+  }
+
+  .contactButton {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .privacy {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-container {
+    gap: 0;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .emailAndPhone {
+    width: auto;
+    display: block;
+    position: absolute;
+  }
+
+  .emailAndPhone p {
+    flex: auto;
+    width: 700px;
+  }
+
+  .contactMeName {
+    width: auto;
+  }
+
+  .emailAndPhoneMobile {
+    display: flex;
+    margin-top: 60px;
+    .email, .phone{
+      flex-direction: column;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    .spaceBetween{
+      margin-left: 0px;
+      margin-bottom: 50px;
+    }
+
+  }
+
+  .arrowUpContact1 {
+    position: relative !important;
+    top: -80px;
+  }
+
 }

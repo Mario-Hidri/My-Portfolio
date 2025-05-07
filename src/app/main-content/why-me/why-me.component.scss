@@ -2,13 +2,22 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 1284px;
   position: relative;
   margin-top: 100px;
   left: 105px;
   gap: 100px;
   height: 552px;
-  padding-top: 92px;
+  padding-top: 120px;
+}
+
+.none {
+  display: none;
+}
+
+.relocateArrow {
+  display: block;
 }
 span {
   font-family: "Roboto Mono";
@@ -20,8 +29,8 @@ span {
 
 .contactButton {
   display: flex;
-  justify-content: flex-end; 
-  text-decoration: none; 
+  justify-content: flex-end;
+  text-decoration: none;
 }
 
 h2 {
@@ -114,12 +123,12 @@ p {
   gap: 12px;
 }
 
-.suitcaseImg{
-    background-image: url("../../../assets/img/suitcase.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 50px;
+.suitcaseImg {
+  background-image: url("../../../assets/img/suitcase.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 50px;
 }
 
 .suitcaseImg:hover {
@@ -137,39 +146,37 @@ p {
 
 .wifiSignal,
 .wifiSignalHover {
-    position: absolute;
-    top: -4px;
-    left: -24px;
-    width: 40px;
-    height: auto;
+  position: absolute;
+  top: -4px;
+  left: -24px;
+  width: 40px;
+  height: auto;
 }
 
 .wifiSignalHover {
-  opacity: 0; 
-
+  opacity: 0;
 }
 
 .laptop:hover .wifiSignal {
-  opacity: 0; 
+  opacity: 0;
 }
 
 .laptop:hover .wifiSignalHover {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .laptop {
-  position: relative; 
+  position: relative;
   height: 80px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.laptopB{
-    height: 40px;
-    width: 40px;
+.laptopB {
+  height: 40px;
+  width: 40px;
 }
-
 
 button {
   width: 212px;
@@ -196,4 +203,103 @@ button {
   // Animate: Animate;
   // animation-timing-function: ease-out;
   // animation-duration: 300ms;
+}
+
+@media (max-width: 1300px) {
+  section {
+    width: 1140px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1270px) {
+  section {
+    left: 40px;
+  }
+}
+
+@media (max-width: 770px) {
+  .profPic2 {
+    display: none;
+  }
+
+  #whyMe {
+    top: 220px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    width: 60%;
+  }
+
+  .whyMe {
+    align-items: center;
+  }
+
+  .workRemote img {
+    display: none;
+  }
+
+  .laptop img {
+    display: block;
+  }
+
+  .iAmLocated h2 {
+    display: none;
+  }
+
+  .none {
+    display: block;
+  }
+
+  .relocateArrowMobile {
+    display: block;
+    position: relative;
+    left: -230px;
+  }
+
+  .relocateArrowMobile, .relocateArrowMobile2 img {
+    width: 22px;
+    height: 55px;
+  }
+
+  .relocateArrowMobile2 {
+    position: relative;
+    display: flex !important;
+    top: 30px;
+  }
+
+  .relocateArrow {
+    display: none;
+  }
+
+  .workRemote {
+    display: block;
+  }
+
+  button {
+    margin-top: 20px;
+    margin-left: -16px;
+  }
+
+  .relocate,
+  .iAmLocated,
+  .suitcase,
+  .workRemote {
+    margin-left: 0;
+  }
+
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-left: 98px;
+  }
 }

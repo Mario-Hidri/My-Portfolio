@@ -47,22 +47,22 @@ footer {
   }
 }
 
-.middleFooter a:hover{
-  color: #02F4BF;
+.middleFooter a:hover {
+  color: #02f4bf;
 }
 
-.middleFooterSymbol {
-    font-size: 12px;
-    color: #e15544;
-    border: 2px solid #e15544;
-    border-radius: 50%;
-    width: 12px; 
-    height: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+.middleFooterSymbol,
+.footerMobileSymbol {
+  font-size: 12px;
+  color: #e15544;
+  border: 2px solid #e15544;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .e123 {
   display: flex;
@@ -72,8 +72,8 @@ footer {
 .middleFooterChild {
   display: flex;
   align-items: center;
-  gap: 5px; 
-  font-size: 14px; 
+  gap: 5px;
+  font-size: 14px;
   color: #e15544;
 }
 
@@ -102,4 +102,79 @@ footer {
 .endFooter {
   display: flex;
   gap: 8px;
+}
+
+@media (max-width: 1300px) {
+  footer {
+    width: 1140px;
+  }
+}
+
+@media (max-width: 1000px) {
+  footer {
+    margin-left: 40px;
+  }
+}
+
+.footer-mobile {
+  width: auto;
+  display: none;
+  align-items: center;
+  text-align: center;
+  font-family: monospace;
+}
+
+.footer-mobile .footer-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto 40px;
+  width: 30%;
+}
+
+.footer-mobile .footer-icons a.gitImg,
+.footer-mobile .footer-icons a.emailImg,
+.footer-mobile .footer-icons a.linkedInImg {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.footer-mobile .footer-logo {
+  font-size: 24px;
+}
+
+.footer-mobile .footer-copy {
+  font-size: 14px;
+}
+
+.footer-mobile .footer-links a {
+  display: block;
+  font-size: 14px;
+  color: #e15544;
+  text-decoration: none;
+}
+
+.footer-logo {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.gap4px{
+  gap: 4px;
+}
+
+@media (max-width: 770px) {
+  footer {
+    display: none;
+  }
+  .footer-mobile {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 280px;
+  }
 }

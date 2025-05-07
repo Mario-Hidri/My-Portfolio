@@ -4,9 +4,6 @@
   scroll-behavior: smooth;
   color: #e15544;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   width: 1440px;
@@ -30,13 +27,14 @@ body {
 }
 
 
-.logo {
+.logo, .footer-logo {
   font-family: "Handjet" !important;
   font-size: 48px !important;
   font-weight: 600 !important;
   line-height: 48px !important;
   letter-spacing: 0.05em !important;
   color: #e15544 !important;
+  margin: 0px!important;
   margin-right: 20px !important;
   margin-left: 120px !important;
 }
@@ -76,4 +74,9 @@ body {
     format("truetype");
 }
 
+@media (max-width: 1300px) {
+   body{
+    width: 1140px;
+  }
+}
 

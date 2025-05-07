@@ -13,9 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactFormComponent {
   privacyPolicyUrl = '/privacy-policy'; 
-
   http = inject(HttpClient)
-
 
   contactData = {
     name: '',
@@ -23,9 +21,6 @@ export class ContactFormComponent {
     message: '',
     privacy: ''
   };
-
-
-
 
   mailTest = true;
 
@@ -58,5 +53,4 @@ export class ContactFormComponent {
       ngForm.resetForm();
     }
   }
-
 }

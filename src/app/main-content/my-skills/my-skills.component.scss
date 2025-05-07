@@ -2,7 +2,7 @@ section {
   height: 423px;
   width: 1284px;
   margin-left: 105px;
-  padding-top: 92px;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -30,6 +30,36 @@ section {
   }
 }
 
+.contactButton {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.cloneButton {
+  display: none;
+}
+
+button {
+  width: 212px;
+  height: 52px;
+  gap: 10px;
+  padding: 15px 30px 15px 30px;
+  background: #02f4bf;
+  color: #0b042d;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.6px;
+  align-self: flex-end;
+  border: none;
+
+  &:hover {
+    color: #e15544;
+    cursor: pointer;
+  }
+}
+
 h1 {
   font-family: "Roboto Mono";
   font-weight: 500;
@@ -49,7 +79,8 @@ h1 {
   flex-wrap: wrap;
 }
 
-.secretBox {
+.secretBox,
+.secretBox1 {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -71,6 +102,113 @@ h1 {
   }
 }
 
-.secretBox:hover p {
+.secretBox,
+.secretBox1:hover p {
   opacity: 1;
+}
+
+.secretBox {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  section {
+    width: 1140px;
+  }
+}
+
+@media (max-width: 1300px) {
+  section {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 770px) {
+  section {
+    padding-top: 550px;
+    width: 400px;
+    align-items: center;
+    margin-left: 400px;
+  }
+
+  .cloneButton {
+    display: flex;
+  }
+
+  .secretBox1 {
+    display: none;
+  }
+
+  .secretBox {
+    display: flex;
+    position: relative;
+    margin-left: -40px;
+  }
+
+  .secretBox p {
+    opacity: 1;
+  }
+
+  .listedSkills2,
+  .listedSkills {
+    all: unset;
+    display: contents;
+  }
+
+  .allSkillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+
+    span {
+      display: none;
+    }
+  }
+
+  .secretBox:hover {
+    span {
+      display: block !important;
+    }
+  }
+
+  .flexVertical {
+    gap: 50px;
+    flex-direction: row !important;
+  }
+
+  .secretBox p,
+  .secretBox .arrow {
+    display: none;
+    position: absolute;
+    left: 0;
+    color: #02f4bf;
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .secretBox .arrow {
+    top: 93%;
+    width: 30px;
+    left: 20px;
+  }
+
+  .secretBox p {
+    top: 150%;
+    width: 400px;
+    height: 80px;
+    padding: 10px;
+    left: -143px;
+  }
+
+  .secretBox:hover .arrow,
+  .secretBox:hover p {
+    display: block;
+  }
+
+  button {
+    margin-top: 130px;
+  }
 }

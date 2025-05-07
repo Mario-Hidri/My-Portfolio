@@ -1,4 +1,3 @@
-
 .navTags {
   display: flex;
   align-items: center;
@@ -14,7 +13,11 @@ nav {
   gap: 0px;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(180deg, #0B042D 63.5%, rgba(11, 4, 45, 0.2) 118.69%);
+  background: linear-gradient(
+    180deg,
+    #0b042d 63.5%,
+    rgba(11, 4, 45, 0.2) 118.69%
+  );
   width: 100vw;
   z-index: 999;
   max-width: 1600px;
@@ -42,12 +45,132 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin-right: 100px;
-
 }
 
-.languageSeperator{
+.languageSeperator {
   margin-left: -18px;
   margin-right: -18px;
   height: 20px;
 }
 
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #0b042d;
+  width: 300px;
+  height: auto;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+  transition: transform 0.3s ease-in-out;
+  border-bottom-left-radius: 30px;
+
+  &.open {
+    display: flex;
+  }
+
+  .mobileMenuHeader {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .closeIcon {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .mobileMenuLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    a {
+      font-family: "Roboto Mono", monospace;
+      font-size: 20px;
+      text-decoration: none;
+      white-space: nowrap;
+
+
+      &:hover {
+        color: #02f4bf;
+      }
+    }
+
+    .languageSwitcher {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    margin: 0 !important;
+    margin-left: 40px !important;
+  }
+}
+
+@media (max-width: 1500px) {
+  nav {
+    width: 1500px;
+  }
+}
+
+@media (max-width: 1300px) {
+  nav {
+    width: 1350px;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav {
+    width: 1250px;
+  }
+}
+
+@media (max-width: 840px) {
+  nav {
+    justify-content: center;
+  }
+  .flex {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .navTags {
+    width: 100vw;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 800px) {
+  .navTags a {
+    display: none;
+  }
+
+  .none {
+    display: block;
+  }
+}
