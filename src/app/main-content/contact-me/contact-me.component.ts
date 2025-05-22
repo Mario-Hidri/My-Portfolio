@@ -22,16 +22,16 @@ export class ContactFormComponent {
     privacy: ''
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
+    endPoint: 'https://mario-hidri.de/sendMail.php',
+    body: (payload: any) => payload,
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
       },
+      responseType: 'text' as 'text',
     },
   };
 

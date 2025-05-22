@@ -71,13 +71,14 @@
         <div class="right">
           <!-- Message Input -->
           <textarea
-            #message="ngModel"
-            [(ngModel)]="contactData.message"
-            required
-            id="message"
-            name="message"
-            [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
-          ></textarea>
+          #message="ngModel"
+          [(ngModel)]="contactData.message"
+          required
+          id="message"
+          name="message"
+          [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
+        ></textarea>
+        
           @if (!message.valid && message.touched) {
           <span class="error">{{ "CONTACT.ERROR_MESSAGE" | translate }}</span>
           }
