@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkWithHref } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { MainContentComponent } from "./main-content/main-content.component";
 import { FooterComponent } from "./footer/footer.component";
@@ -10,7 +10,13 @@ import { LanguageService } from './services/language.services';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, TranslateModule],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent,
+    TranslateModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

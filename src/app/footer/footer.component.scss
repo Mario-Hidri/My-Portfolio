@@ -69,6 +69,14 @@ footer {
   gap: 24px;
 }
 
+.e123 a {
+  cursor: pointer;
+  color: inherit;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
 .middleFooterChild {
   display: flex;
   align-items: center;
