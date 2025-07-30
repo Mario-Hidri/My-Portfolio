@@ -1,44 +1,39 @@
 <section id="contactMe">
   <div class="contactMeName">
-    <h1>{{ "CONTACT.TITLE" | translate }}</h1>
-    <img src="../../../assets/img/ArrowContact.svg" alt="" />
+    <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
+    <img src="../../../assets/img/ArrowContact.svg" alt="Arrow Icon" />
   </div>
 
+  <!-- Desktop -->
   <div class="emailAndPhone">
-    <p>
-      {{ "CONTACT.DESCRIPTION" | translate }}
-    </p>
-
+    <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
     <div class="spaceBetween">
       <div class="email">
         <div class="emailImg"></div>
         <a href="mailto:mariohidri2014@yahoo.com">
-          {{ "CONTACT.EMAIL" | translate }}: mariohidri2014&#64;yahoo.com
+          {{ 'CONTACT.EMAIL' | translate }}: mariohidri2014&#64;yahoo.com
         </a>
       </div>
-
       <div class="phone">
         <div class="phoneImg"></div>
         <a href="tel:+4917662095211">
-          {{ "CONTACT.PHONE" | translate }}: +49 176 620 952 11
+          {{ 'CONTACT.PHONE' | translate }}: +49 176 620 952 11
         </a>
       </div>
     </div>
-
     <a href="#header"><div class="arrowUpContact"></div></a>
   </div>
 
+  <!-- Mobile description -->
   <div class="emailAndPhone1">
-    <p>
-      {{ "CONTACT.DESCRIPTION" | translate }}
-    </p>
+    <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
   </div>
 
+  <!-- Form -->
   <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-container">
         <div class="left">
-          <!-- Name Input -->
           <input
             [(ngModel)]="contactData.name"
             #name="ngModel"
@@ -49,10 +44,9 @@
             [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
           />
           @if (!name.valid && name.touched) {
-          <span class="error">{{ "CONTACT.ERROR_NAME" | translate }}</span>
+          <span class="error">{{ 'CONTACT.ERROR_NAME' | translate }}</span>
           }
 
-          <!-- Email Input -->
           <input
             [(ngModel)]="contactData.email"
             #email="ngModel"
@@ -64,28 +58,25 @@
             [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
           />
           @if (!email.valid && email.touched) {
-          <span class="error">{{ "CONTACT.ERROR_EMAIL" | translate }}</span>
+          <span class="error">{{ 'CONTACT.ERROR_EMAIL' | translate }}</span>
           }
         </div>
 
         <div class="right">
-          <!-- Message Input -->
           <textarea
-          #message="ngModel"
-          [(ngModel)]="contactData.message"
-          required
-          id="message"
-          name="message"
-          [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
-        ></textarea>
-        
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            required
+            id="message"
+            name="message"
+            [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
+          ></textarea>
           @if (!message.valid && message.touched) {
-          <span class="error">{{ "CONTACT.ERROR_MESSAGE" | translate }}</span>
+          <span class="error">{{ 'CONTACT.ERROR_MESSAGE' | translate }}</span>
           }
         </div>
       </div>
 
-      <!-- Privacy Checkbox -->
       <div class="privacy">
         <input
           type="checkbox"
@@ -96,16 +87,16 @@
           required
         />
         <label>
-          {{ "CONTACT.PRIVACY_PREFIX" | translate }}
+          {{ 'CONTACT.PRIVACY_PREFIX' | translate }}
           <a href="/privacy-policy" target="_blank">
-            {{ "CONTACT.PRIVACY_LINK" | translate }}
+            {{ 'CONTACT.PRIVACY_LINK' | translate }}
           </a>
-          {{ "CONTACT.PRIVACY_SUFFIX" | translate }}
+          {{ 'CONTACT.PRIVACY_SUFFIX' | translate }}
         </label>
       </div>
 
       @if (!privacy.valid && privacy.touched) {
-      <span class="error">{{ "CONTACT.ERROR_PRIVACY" | translate }}</span>
+      <span class="error">{{ 'CONTACT.ERROR_PRIVACY' | translate }}</span>
       }
 
       <div class="contactButton">
@@ -116,27 +107,20 @@
         />
       </div>
     </form>
-
   </div>
 
+  <!-- Mobile version contact info and back arrow -->
   <div class="emailAndPhoneMobile">
     <a href="#header"><div class="arrowUpContact1"></div></a>
-    
     <div class="spaceBetween">
       <div class="email">
         <div class="emailImg"></div>
-        <a href="mailto:mariohidri2014@yahoo.com">
-          mariohidri2014&#64;yahoo.com
-        </a>
+        <a href="mailto:mariohidri2014@yahoo.com">mariohidri2014&#64;yahoo.com</a>
       </div>
-
       <div class="phone">
         <div class="phoneImg"></div>
-        <a href="tel:+4917662095211">
-        +49 176 620 952 11
-        </a>
+        <a href="tel:+4917662095211">+49 176 620 952 11</a>
       </div>
     </div>
   </div>
-
 </section>

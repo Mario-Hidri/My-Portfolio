@@ -1,5 +1,6 @@
 section {
   padding-top: 12px;
+  width: max-content;
 }
 
 select,
@@ -75,24 +76,21 @@ textarea {
   font-size: 14px;
 }
 
-/* Custom Checkbox */
 .privacy input {
   width: 16px;
   height: 16px;
-  appearance: none; /* Hide default checkbox */
+  appearance: none;
   border: 1.5px solid #02f4bf;
   background: transparent;
   position: relative;
   cursor: pointer;
 }
 
-/* Checkbox Checked State */
 .privacy input:checked {
   background-color: #02f4bf;
   border-color: #02f4bf;
 }
 
-/* Custom Checkmark */
 .privacy input:checked::after {
   content: "✔";
   color: white;
@@ -104,12 +102,10 @@ textarea {
   transform: translate(-50%, -50%);
 }
 
-/* Checkbox Hover Effect */
 .privacy input:hover {
   border-color: #01d1a5;
 }
 
-/* Privacy Policy Text */
 .privacy label {
   flex: 1;
   color: #02f4bf;
@@ -127,7 +123,6 @@ textarea {
   color: #ef4734;
 }
 
-/* Submit Button */
 input[type="submit"] {
   background-color: transparent;
   color: #e15544;
@@ -136,10 +131,7 @@ input[type="submit"] {
   margin-top: 10px;
   width: 104px !important;
   height: 52px !important;
-  padding-top: 15px;
-  padding-right: 30px;
-  padding-bottom: 15px;
-  padding-left: 30px;
+  padding: 15px 30px;
   gap: 10px;
   border: 1px solid #02f4bf;
   transition: color 0.2s ease-in-out;
@@ -174,7 +166,6 @@ input[type="submit"]:hover {
   display: flex;
   align-self: flex-end !important;
   position: absolute;
-  // right: -300px;
 }
 
 .emailAndPhone {
@@ -192,6 +183,7 @@ input[type="submit"]:hover {
     color: #02f4bf;
     flex: 1;
   }
+
   a {
     text-decoration: none;
   }
@@ -297,6 +289,7 @@ input[type="submit"]:hover {
   gap: 12px;
   flex: 1;
   margin-left: 90px;
+
   a {
     color: #02f4bf;
   }
@@ -307,14 +300,8 @@ section {
 }
 
 @media (max-width: 1300px) {
-  .emailAndPhone {
-    width: 1140px;
-  }
-
-  .container {
-    width: 1140px;
-  }
-
+  .emailAndPhone,
+  .container,
   .contactMeName {
     width: 1140px;
   }
@@ -327,8 +314,20 @@ section {
 }
 
 @media (max-width: 770px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* center vertically */
+    text-align: center;
+    margin-left: 220px;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
   .form-container {
     flex-direction: column;
+    gap: 0;
   }
 
   input[type="text"],
@@ -338,15 +337,14 @@ section {
   }
 
   .privacy {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
   }
 
   .privacy label {
     white-space: normal;
   }
 
-  /* Error messages */
   .error {
     color: red;
     font-weight: 100;
@@ -373,39 +371,13 @@ section {
   .emailAndPhone1 {
     display: flex;
   }
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-  }
 
   .contactMeName img {
     display: none;
   }
 
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 700px;
-  }
-
-  .contactButton {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .privacy {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .form-container {
-    gap: 0;
-  }
-
   .container {
-    width: auto;
+    width: 100%;
   }
 
   .emailAndPhone {
@@ -416,29 +388,34 @@ section {
 
   .emailAndPhone p {
     flex: auto;
-    width: 700px;
+    width: 100%;
   }
 
   .contactMeName {
     width: auto;
+    justify-content: center;
+    font-size: 42px;
+    line-height: 52px;
+    text-align: center;
   }
 
   .emailAndPhoneMobile {
     display: flex;
     margin-top: 60px;
-    .email, .phone{
+
+    .email,
+    .phone {
       flex-direction: column;
     }
 
-    a{
+    a {
       text-decoration: none;
     }
 
-    .spaceBetween{
+    .spaceBetween {
       margin-left: 0px;
       margin-bottom: 50px;
     }
-
   }
 
   .arrowUpContact1 {
@@ -446,4 +423,9 @@ section {
     top: -80px;
   }
 
+  .contactButton {
+    justify-content: center;
+  }
 }
+
+

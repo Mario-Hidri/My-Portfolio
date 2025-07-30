@@ -1,16 +1,13 @@
-.navTags {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  white-space: nowrap;
-  gap: 30px;
-}
-
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 92px;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 20px;
   display: flex;
-  gap: 0px;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(
@@ -18,26 +15,33 @@ nav {
     #0b042d 63.5%,
     rgba(11, 4, 45, 0.2) 118.69%
   );
-  width: 100vw;
   z-index: 999;
-  max-width: 1600px;
+}
+
+.navTags {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  white-space: nowrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: "Roboto Mono", monospace;
 }
 
 a {
-  width: 80px;
-  height: 26px;
-  gap: 0px;
-  opacity: 1;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  line-height: 26.4px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
-}
+  color: #E15544;
 
-a:hover {
-  cursor: pointer;
-  color: #02f4bf;
+  &:hover {
+    cursor: pointer;
+    color: #02f4bf;
+  }
 }
 
 .flex {
@@ -45,12 +49,29 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin-right: 100px;
+  margin-left: 75px;
 }
 
 .languageSeperator {
-  margin-left: -18px;
-  margin-right: -18px;
+  margin: 0 12px;
   height: 20px;
+}
+
+.burgerButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 20px;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: 801px) {
+    display: none;
+  }
 }
 
 .mobileMenu {
@@ -59,18 +80,23 @@ a:hover {
   right: 0;
   background-color: #0b042d;
   width: 300px;
-  height: auto;
+  height: 100vh;
   z-index: 1000;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   padding-top: 20px;
-  transition: transform 0.3s ease-in-out;
   border-bottom-left-radius: 30px;
 
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
   &.open {
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .mobileMenuHeader {
@@ -79,12 +105,18 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
 
-    .closeIcon {
+  .closeButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 20px;
+
+    img {
       width: 30px;
       height: 30px;
-      margin-right: 20px;
-      cursor: pointer;
     }
   }
 
@@ -101,7 +133,6 @@ a:hover {
       font-size: 20px;
       text-decoration: none;
       white-space: nowrap;
-
 
       &:hover {
         color: #02f4bf;
@@ -121,32 +152,10 @@ a:hover {
   }
 }
 
-.none {
-  display: none;
-}
-
+/* Responsive Rules */
 @media (max-width: 1000px) {
   .logo {
-    margin: 0 !important;
     margin-left: 40px !important;
-  }
-}
-
-@media (max-width: 1500px) {
-  nav {
-    width: 1500px;
-  }
-}
-
-@media (max-width: 1300px) {
-  nav {
-    width: 1350px;
-  }
-}
-
-@media (max-width: 1200px) {
-  nav {
-    width: 1250px;
   }
 }
 
@@ -154,13 +163,11 @@ a:hover {
   nav {
     justify-content: center;
   }
-  .flex {
-    position: absolute;
-    left: -9999px;
-  }
+
+
 
   .navTags {
-    width: 100vw;
+    width: 95%;
     justify-content: space-between;
   }
 }
@@ -170,7 +177,12 @@ a:hover {
     display: none;
   }
 
-  .none {
+    .flex {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .burgerButton {
     display: block;
   }
 }

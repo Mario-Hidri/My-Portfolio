@@ -1,11 +1,21 @@
 <section id="introduction">
-  <div>
+  <div class="intro-text">
     <h2>{{ 'INTRO.JOB_TITLE' | translate }}</h2>
     <h1>{{ 'INTRO.NAME' | translate }}</h1>
   </div>
-  <a href="#whyMe">
-    <div class="arrowDown"></div>
+
+  <img
+    class="profile-pic"
+    src="../../../assets/img/bewerbung.png"
+    alt="Profile Picture"
+  />
+
+  <a class="scroll-arrow" href="#whyMe" aria-label="Scroll down">
+    <div class="arrow-down"></div>
   </a>
-  <img class="profilePic" src="../../../assets/img/bewerbung.png" alt="Profile Picture" />
-  <a class="contactMe" href="#contactMe">{{ 'INTRO.CONTACT_BUTTON' | translate }}</a>
+
+  <a class="contact-me" href="#contactMe">
+    {{ 'INTRO.CONTACT_BUTTON' | translate }}
+  </a>
 </section>
+

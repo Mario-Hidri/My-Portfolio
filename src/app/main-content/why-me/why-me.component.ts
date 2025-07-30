@@ -7,8 +7,11 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [FormsModule, TranslateModule],
   templateUrl: './why-me.component.html',
-  styleUrl: './why-me.component.scss'
+  styleUrls: ['./why-me.component.scss']
 })
 export class WhyMeComponent {
-
+  scrollToContact(event: Event) {
+    event.preventDefault();
+    document.querySelector('#contactMe')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

@@ -112,12 +112,6 @@ footer {
   gap: 8px;
 }
 
-@media (max-width: 1300px) {
-  footer {
-    width: 1140px;
-  }
-}
-
 @media (max-width: 1000px) {
   footer {
     margin-left: 40px;
@@ -125,7 +119,6 @@ footer {
 }
 
 .footer-mobile {
-  width: auto;
   display: none;
   align-items: center;
   text-align: center;
@@ -171,7 +164,7 @@ footer {
   margin-right: 0px !important;
 }
 
-.gap4px{
+.gap4px {
   gap: 4px;
 }
 
@@ -184,5 +177,21 @@ footer {
     justify-content: space-between;
     flex-direction: column;
     height: 280px;
+    margin-left: 408px;
+    width: max-content;
+    align-items: center;
   }
+
+  .footer-mobile .footer-icons {
+  width: 40%;
 }
+
+.footer-mobile .footer-icons a.gitImg,
+.footer-mobile .footer-icons a.emailImg,
+.footer-mobile .footer-icons a.linkedInImg {
+  width: 120px;
+  height: 80px;
+}
+
+}
+
