@@ -1,6 +1,5 @@
 section {
   padding-top: 12px;
-  width: max-content;
 }
 
 select,
@@ -178,6 +177,7 @@ input[type="submit"]:hover {
   font-size: 18px;
   line-height: 21px;
   text-align: justify;
+  max-width: 1440px;
 
   p {
     color: #02f4bf;

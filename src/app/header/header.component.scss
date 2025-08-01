@@ -8,7 +8,7 @@ nav {
   margin: auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(
     180deg,
@@ -21,7 +21,7 @@ nav {
 .navTags {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 140px;
   white-space: nowrap;
 }
 

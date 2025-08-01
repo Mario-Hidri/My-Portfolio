@@ -1,14 +1,13 @@
-/* src/app/introduction/introduction.component.scss */
 #introduction {
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
-  max-width: 1440px;
-  margin: 100px auto 0;
+  max-width: 1300px;
   padding: 0 20px;
-  gap: 40px;
+  left: 105px;
+  margin-top: 100px;
 
   .intro-text {
     text-align: left;
@@ -33,7 +32,6 @@
   }
 
   .profile-pic {
-    flex: 1 1 300px;
     width: 539px;
     max-height: 602px;
     height: auto;
@@ -98,7 +96,7 @@
     padding: 0 !important;
     gap: 20px !important;
     height: auto;
-    width: 1220px;
+    width: 1150px;
 
     .profile-pic {
       order: 1;
@@ -124,5 +122,10 @@
     .contact-me {
       display: none !important;
     }
+  }
+}
+@media (max-width: 1270px) {
+  #introduction {
+    left: 40px;
   }
 }
