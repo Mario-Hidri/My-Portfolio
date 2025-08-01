@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -7,19 +8,24 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule, TranslateModule,RouterModule],
+  imports: [
+    CommonModule,      
+    FormsModule,
+    TranslateModule,
+    RouterModule
+  ],
   templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.scss',
+  styleUrls: ['./contact-me.component.scss'],
 })
 export class ContactFormComponent {
-  privacyPolicyUrl = '/privacy-policy'; 
-  http = inject(HttpClient)
+  privacyPolicyUrl = '/privacy-policy';
+  http = inject(HttpClient);
 
   contactData = {
     name: '',
     email: '',
     message: '',
-    privacy: ''
+    privacy: false,
   };
 
   mailTest = false;
@@ -37,19 +43,18 @@ export class ContactFormComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(
+          this.post.endPoint,
+          this.post.body(this.contactData),
+          this.post.options
+        )
         .subscribe({
-          next: (response) => {
-
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
+          next: () => ngForm.resetForm(),
+          error: (err) => console.error(err),
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
   }

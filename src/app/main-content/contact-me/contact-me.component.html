@@ -1,10 +1,10 @@
 <section id="contactMe">
   <div class="contactMeName">
     <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
-    <img src="../../../assets/img/ArrowContact.svg" alt="Arrow Icon" />
+    <img src="assets/img/ArrowContact.svg" alt="Arrow Icon" />
   </div>
 
-  <!-- Desktop -->
+  <!-- Desktop contact info -->
   <div class="emailAndPhone">
     <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
     <div class="spaceBetween">
@@ -21,15 +21,17 @@
         </a>
       </div>
     </div>
-    <a href="#header"><div class="arrowUpContact"></div></a>
+    <a href="#header">
+      <div class="arrowUpContact"></div>
+    </a>
   </div>
 
-  <!-- Mobile description -->
+  <!-- Mobile description only -->
   <div class="emailAndPhone1">
     <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
   </div>
 
-  <!-- Form -->
+  <!-- Contact form -->
   <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-container">
@@ -43,9 +45,9 @@
             name="name"
             [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
           />
-          @if (!name.valid && name.touched) {
-          <span class="error">{{ 'CONTACT.ERROR_NAME' | translate }}</span>
-          }
+          <span *ngIf="!name.valid && name.touched" class="error">
+            {{ 'CONTACT.ERROR_NAME' | translate }}
+          </span>
 
           <input
             [(ngModel)]="contactData.email"
@@ -57,23 +59,23 @@
             name="email"
             [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
           />
-          @if (!email.valid && email.touched) {
-          <span class="error">{{ 'CONTACT.ERROR_EMAIL' | translate }}</span>
-          }
+          <span *ngIf="!email.valid && email.touched" class="error">
+            {{ 'CONTACT.ERROR_EMAIL' | translate }}
+          </span>
         </div>
 
         <div class="right">
           <textarea
-            #message="ngModel"
             [(ngModel)]="contactData.message"
+            #message="ngModel"
             required
             id="message"
             name="message"
             [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
           ></textarea>
-          @if (!message.valid && message.touched) {
-          <span class="error">{{ 'CONTACT.ERROR_MESSAGE' | translate }}</span>
-          }
+          <span *ngIf="!message.valid && message.touched" class="error">
+            {{ 'CONTACT.ERROR_MESSAGE' | translate }}
+          </span>
         </div>
       </div>
 
@@ -94,10 +96,9 @@
           {{ 'CONTACT.PRIVACY_SUFFIX' | translate }}
         </label>
       </div>
-
-      @if (!privacy.valid && privacy.touched) {
-      <span class="error">{{ 'CONTACT.ERROR_PRIVACY' | translate }}</span>
-      }
+      <span *ngIf="!privacy.valid && privacy.touched" class="error">
+        {{ 'CONTACT.ERROR_PRIVACY' | translate }}
+      </span>
 
       <div class="contactButton">
         <input
@@ -109,9 +110,11 @@
     </form>
   </div>
 
-  <!-- Mobile version contact info and back arrow -->
+  <!-- Mobile contact info + back arrow -->
   <div class="emailAndPhoneMobile">
-    <a href="#header"><div class="arrowUpContact1"></div></a>
+    <a href="#header">
+      <div class="arrowUpContact1"></div>
+    </a>
     <div class="spaceBetween">
       <div class="email">
         <div class="emailImg"></div>
