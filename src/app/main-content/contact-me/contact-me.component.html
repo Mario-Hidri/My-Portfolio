@@ -1,22 +1,22 @@
 <section id="contactMe">
   <div class="contactMeName">
-    <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
+    <h1>{{ "CONTACT.TITLE" | translate }}</h1>
     <img src="/assets/img/ArrowContact.svg" alt="Arrow Icon" />
   </div>
 
   <div class="emailAndPhone">
-    <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
+    <p>{{ "CONTACT.DESCRIPTION" | translate }}</p>
     <div class="spaceBetween">
       <div class="email">
         <div class="emailImg"></div>
         <a href="mailto:mariohidri2014@yahoo.com">
-          {{ 'CONTACT.EMAIL' | translate }}: mariohidri2014&#64;yahoo.com
+          {{ "CONTACT.EMAIL" | translate }}: mariohidri2014&#64;yahoo.com
         </a>
       </div>
       <div class="phone">
         <div class="phoneImg"></div>
         <a href="tel:+4917662095211">
-          {{ 'CONTACT.PHONE' | translate }}: +49 176 620 952 11
+          {{ "CONTACT.PHONE" | translate }}: +49 176 620 952 11
         </a>
       </div>
     </div>
@@ -25,55 +25,58 @@
     </a>
   </div>
 
-  <!-- Mobile description only -->
+  <!-- Mobile Beschreibung -->
   <div class="emailAndPhone1">
-    <p>{{ 'CONTACT.DESCRIPTION' | translate }}</p>
+    <p>{{ "CONTACT.DESCRIPTION" | translate }}</p>
   </div>
 
-  <!-- Contact form -->
+  <!-- Formular -->
   <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-container">
         <div class="left">
           <input
             [(ngModel)]="contactData.name"
-            #name="ngModel"
+            name="name"
             required
             type="text"
             id="name"
-            name="name"
             [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+            #name="ngModel"
           />
           <span *ngIf="!name.valid && name.touched" class="error">
-            {{ 'CONTACT.ERROR_NAME' | translate }}
+            {{ "CONTACT.ERROR_NAME" | translate }}
           </span>
 
           <input
             [(ngModel)]="contactData.email"
-            #email="ngModel"
-            required
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            type="email"
-            id="email"
             name="email"
+            required
+            type="email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            id="email"
             [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+            #email="ngModel"
           />
           <span *ngIf="!email.valid && email.touched" class="error">
-            {{ 'CONTACT.ERROR_EMAIL' | translate }}
+            {{ "CONTACT.ERROR_EMAIL" | translate }}
           </span>
         </div>
 
         <div class="right">
           <textarea
             [(ngModel)]="contactData.message"
-            #message="ngModel"
+            name="message"
             required
             id="message"
-            name="message"
             [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+            #message="ngModel"
           ></textarea>
           <span *ngIf="!message.valid && message.touched" class="error">
-            {{ 'CONTACT.ERROR_MESSAGE' | translate }}
+            {{ "CONTACT.ERROR_MESSAGE" | translate }}
           </span>
         </div>
       </div>
@@ -83,20 +86,20 @@
           type="checkbox"
           id="privacy"
           name="privacy"
-          #privacy="ngModel"
           [(ngModel)]="contactData.privacy"
           required
+          #privacy="ngModel"
         />
         <label>
-          {{ 'CONTACT.PRIVACY_PREFIX' | translate }}
+          {{ "CONTACT.PRIVACY_PREFIX" | translate }}
           <a href="/privacy-policy" target="_blank">
-            {{ 'CONTACT.PRIVACY_LINK' | translate }}
+            {{ "CONTACT.PRIVACY_LINK" | translate }}
           </a>
-          {{ 'CONTACT.PRIVACY_SUFFIX' | translate }}
+          {{ "CONTACT.PRIVACY_SUFFIX" | translate }}
         </label>
       </div>
       <span *ngIf="!privacy.valid && privacy.touched" class="error">
-        {{ 'CONTACT.ERROR_PRIVACY' | translate }}
+        {{ "CONTACT.ERROR_PRIVACY" | translate }}
       </span>
 
       <div class="contactButton">
@@ -109,7 +112,7 @@
     </form>
   </div>
 
-  <!-- Mobile contact info + back arrow -->
+  <!-- Mobile Kontakt + Pfeil -->
   <div class="emailAndPhoneMobile">
     <a href="#header">
       <div class="arrowUpContact1"></div>
@@ -117,7 +120,9 @@
     <div class="spaceBetween">
       <div class="email">
         <div class="emailImg"></div>
-        <a href="mailto:mariohidri2014@yahoo.com">mariohidri2014&#64;yahoo.com</a>
+        <a href="mailto:mariohidri2014@yahoo.com"
+          >mariohidri2014&#64;yahoo.com</a
+        >
       </div>
       <div class="phone">
         <div class="phoneImg"></div>
