@@ -8,12 +8,12 @@ export class LanguageService {
   private translate = inject(TranslateService);
 
   constructor() {
-    this.translate.setDefaultLang('en'); // Default language
+    this.translate.setDefaultLang('en'); 
   }
 
   changeLanguage(lang: string): void {
     this.translate.use(lang);
-    localStorage.setItem('language', lang); // Save preference
+    localStorage.setItem('language', lang); 
   }
 
   getCurrentLanguage(): string {

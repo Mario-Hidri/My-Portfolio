@@ -157,7 +157,7 @@ input[type="submit"]:hover {
 }
 
 .arrowUpContact1 {
-  background-image: url("../../../assets/img/arrowUpContact.svg");
+  background-image: url("/assets/img/arrowUpContact.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 50px;
@@ -233,19 +233,19 @@ input[type="submit"]:hover {
 }
 
 .phoneImg {
-  background-image: url("../../../assets/img/phone.svg");
+  background-image: url("/assets/img/phone.svg");
 }
 
 .emailImg {
-  background-image: url("../../../assets/img/email.svg");
+  background-image: url("/assets/img/email.svg");
 }
 
 .phone:hover .phoneImg {
-  background-image: url("../../../assets/img/phoneHov.svg");
+  background-image: url("/assets/img/phoneHov.svg");
 }
 
 .email:hover .emailImg {
-  background-image: url("../../../assets/img/emailHov.svg");
+  background-image: url("/assets/img/emailHov.svg");
 }
 
 .email:hover a,
@@ -255,7 +255,7 @@ input[type="submit"]:hover {
 }
 
 .arrowUpContact {
-  background-image: url("../../../assets/img/arrowUpContact.svg");
+  background-image: url("/assets/img/arrowUpContact.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 50px;
@@ -264,7 +264,7 @@ input[type="submit"]:hover {
 }
 
 .arrowUpContact:hover {
-  background-image: url("../../../assets/img/arrowUpContactHov.svg");
+  background-image: url("/assets/img/arrowUpContactHov.svg");
 }
 
 .arrowUpContact:hover::after {

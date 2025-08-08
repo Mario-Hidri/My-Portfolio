@@ -7,7 +7,7 @@
   max-width: 1300px;
   padding: 0 20px;
   left: 105px;
-  margin-top: 100px;
+  margin-top: 55px;
 
   .intro-text {
     text-align: left;
@@ -47,11 +47,11 @@
     .arrow-down {
       width: 22px;
       height: 50px;
-      background: url("../../../assets/img/vec.png") no-repeat center/contain;
+      background: url("/assets/img/vec.png") no-repeat center/contain;
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        background-image: url("../../../assets/img/hoverVec.png");
+        background-image: url("/assets/img/hoverVec.png");
 
         &::after {
           content: "";
