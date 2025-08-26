@@ -1,5 +1,7 @@
 section {
   padding-top: 12px;
+  margin-left: 120px;
+  scroll-margin-top: 115px;
 }
 
 select,
@@ -20,20 +22,17 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px transparent inset !important; 
-  box-shadow: 0 0 0 1000px transparent inset !important;         
-  -webkit-text-fill-color: #02f4bf !important;                   
-  caret-color: #02f4bf !important;                               
-  transition: background-color 5000s ease-in-out 0s !important;  
-  
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #02f4bf !important;
+  caret-color: #02f4bf !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
-
 
 .container {
   max-width: 1440px;
-  margin-top: 12px;
+  margin: 12px auto 50px auto; /* centers horizontally */
   font-family: "Roboto Mono";
-  margin-bottom: 50px;
 }
 
 .form-container {
@@ -117,7 +116,7 @@ textarea {
 .privacy label {
   flex: 1;
   color: #02f4bf;
-  line-height: 2.5;
+  // line-height: 2.5;
   white-space: nowrap;
 }
 
@@ -157,12 +156,12 @@ input[type="submit"]:hover {
   font-size: 54px;
   line-height: 64px;
   gap: 40px;
+}
 
-  img {
-    width: 82px;
-    height: 60px;
-    margin-top: 24px;
-  }
+.contactMeName img {
+  width: 82px;
+  height: 60px;
+  margin-top: 24px;
 }
 
 .arrowUpContact1 {
@@ -187,15 +186,15 @@ input[type="submit"]:hover {
   line-height: 21px;
   text-align: justify;
   max-width: 1440px;
+}
 
-  p {
-    color: #02f4bf;
-    flex: 1;
-  }
+.emailAndPhone p {
+  color: #02f4bf;
+  flex: 1;
+}
 
-  a {
-    text-decoration: none;
-  }
+.emailAndPhone a {
+  text-decoration: none;
 }
 
 .emailAndPhoneMobile {
@@ -215,12 +214,12 @@ input[type="submit"]:hover {
   font-size: 18px;
   line-height: 21px;
   text-align: justify;
+}
 
-  p {
-    color: #02f4bf;
-    flex: 1;
-    width: 700px;
-  }
+.emailAndPhone1 p {
+  color: #02f4bf;
+  flex: 1;
+  width: 700px;
 }
 
 .email,
@@ -298,41 +297,44 @@ input[type="submit"]:hover {
   gap: 12px;
   flex: 1;
   margin-left: 90px;
+}
 
-  a {
-    color: #02f4bf;
+.spaceBetween a {
+  color: #02f4bf;
+}
+
+/* ---------- Responsive ---------- */
+
+/* between 771px and 1300px */
+@media (min-width: 771px) and (max-width: 1300px) {
+  .container,
+  .emailAndPhone,
+  .contactMeName {
+    max-width: 1140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-section {
-  margin-left: 105px;
-}
+/* phones and small screens */
+@media (max-width: 770px) {
+  #contactMe {
+    display: block;
+    width: 180%;
+    max-width: 600px;
+    margin-left: 282px;
+    margin-right: auto;
+    padding: 20px 16px;
+    text-align: center;
+  }
 
-@media (max-width: 1300px) {
-  .emailAndPhone,
   .container,
   .contactMeName {
-    width: 1140px;
-  }
-}
-
-@media (max-width: 1270px) {
-  section {
-    margin-left: 40px;
-  }
-}
-
-@media (max-width: 770px) {
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 360px;
-    min-height: 100vh;
-    padding: 20px;
-    width: 100%;
+    width: 100% !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .form-container {
@@ -343,7 +345,12 @@ section {
   input[type="text"],
   input[type="email"],
   textarea {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  textarea {
+    height: 144px;
   }
 
   .privacy {
@@ -382,50 +389,34 @@ section {
     display: flex;
   }
 
-  .contactMeName img {
-    display: none;
-  }
-
-  .container {
-    width: 100%;
-  }
-
-  .emailAndPhone {
-    width: auto;
-    display: block;
-    position: absolute;
-  }
-
-  .emailAndPhone p {
-    flex: auto;
-    width: 100%;
-  }
-
   .contactMeName {
-    width: auto;
     justify-content: center;
     font-size: 42px;
     line-height: 52px;
     text-align: center;
   }
 
+  .contactMeName img {
+    display: none;
+  }
+
   .emailAndPhoneMobile {
     display: flex;
     margin-top: 60px;
+  }
 
-    .email,
-    .phone {
-      flex-direction: column;
-    }
+  .emailAndPhoneMobile .email,
+  .emailAndPhoneMobile .phone {
+    flex-direction: column;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  .emailAndPhoneMobile a {
+    text-decoration: none;
+  }
 
-    .spaceBetween {
-      margin-left: 0px;
-      margin-bottom: 50px;
-    }
+  .emailAndPhoneMobile .spaceBetween {
+    margin-left: 120px;
+    margin-bottom: 50px;
   }
 
   .arrowUpContact1 {
