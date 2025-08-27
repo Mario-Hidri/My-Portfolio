@@ -92,7 +92,7 @@
         />
         <label>
           {{ "CONTACT.PRIVACY_PREFIX" | translate }}
-          <a href="/privacy-policy" >
+          <a href="/privacy-policy">
             {{ "CONTACT.PRIVACY_LINK" | translate }}
           </a>
           {{ "CONTACT.PRIVACY_SUFFIX" | translate }}
@@ -103,11 +103,9 @@
       </span>
 
       <div class="contactButton">
-        <input
-          type="submit"
-          [value]="'CONTACT.SEND_BUTTON' | translate"
-          [disabled]="!contactForm.valid"
-        />
+        <button type="submit" [disabled]="!contactForm.valid">
+          {{ "CONTACT.SEND_BUTTON" | translate }}
+        </button>
       </div>
 
       <!-- Success / Error Messages -->
