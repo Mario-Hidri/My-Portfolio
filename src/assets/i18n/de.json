@@ -38,7 +38,7 @@
   "GITHUB": "GitHub",
   "LIVE": "Live-Test",
   "POLLO": {
-    "NAME": "Pollo Loco",
+    "NAME": "El Pollo Loco",
     "TECH": "JavaScript | HTML | CSS",
     "DESCRIPTION": "Springe, renne und wirf in diesem objektorientierten Spiel. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
   },
@@ -60,9 +60,9 @@
     "JAVASCRIPT": "JavaScript",
     "HTML": "HTML",
     "CSS": "CSS",
-    "REST_API": "Rest-Api",
+    "REST_API": "REST-API",
     "FIREBASE": "Firebase",
-    "GIT": "GIT",
+    "GIT": "Git",
     "SCRUM": "Scrum",
     "MATERIAL": "Material Design",
     "CHALLENGE": {

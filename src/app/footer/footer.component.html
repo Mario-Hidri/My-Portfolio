@@ -10,16 +10,19 @@
       <h2>{{ "FOOTER.COPYRIGHT" | translate }}</h2>
     </div>
     <div class="e123">
-      <a routerLink="/legal-notice">{{ "FOOTER.LEGAL_NOTICE" | translate }}</a>
-      <a routerLink="/privacy-policy">{{ "FOOTER.PRIVACY_POLICY" | translate }}</a>
+      <a routerLink="/legal-notice" (click)="scrollTop()">
+        {{ "FOOTER.LEGAL_NOTICE" | translate }}
+      </a>
+      <a routerLink="/privacy-policy" (click)="scrollTop()">
+        {{ "FOOTER.PRIVACY_POLICY" | translate }}
+      </a>
     </div>
-
   </div>
 
   <div class="endFooter">
-    <a href="https://github.com/Mario-Hidri" target="_blank"
-      ><div class="gitImg"></div
-    ></a>
+    <a href="https://github.com/Mario-Hidri" target="_blank">
+      <div class="gitImg"></div>
+    </a>
     <a href="mailto:mariohidri2014@yahoo.com"><div class="emailImg"></div></a>
     <a href="https://www.linkedin.com/in/mario-hidri-b030a6367" target="_blank">
       <div class="linkedInImg"></div>
@@ -48,7 +51,11 @@
   </div>
 
   <div class="footer-links gap4px">
-    <a [href]="legalNotice">{{ "FOOTER.LEGAL_NOTICE" | translate }}</a>
-    <a [href]="privacyPolicyUrl">{{ "FOOTER.PRIVACY_POLICY" | translate }}</a>
+    <a routerLink="/legal-notice" (click)="scrollTop()">
+      {{ "FOOTER.LEGAL_NOTICE" | translate }}
+    </a>
+    <a routerLink="/privacy-policy" (click)="scrollTop()">
+      {{ "FOOTER.PRIVACY_POLICY" | translate }}
+    </a>
   </div>
 </footer>

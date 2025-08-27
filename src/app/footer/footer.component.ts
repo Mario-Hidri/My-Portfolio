@@ -11,6 +11,9 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+scrollTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   privacyPolicyUrl = '/privacy-policy';
   legalNotice = '/legal-notice';
 }

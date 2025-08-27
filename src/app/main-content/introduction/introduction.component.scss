@@ -2,12 +2,13 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1600px;
+  width: auto;
   padding: 0 20px;
   left: 105px;
-  margin-top: 55px;
+  height: 100vh;
 
   .intro-text {
     text-align: left;
@@ -32,10 +33,10 @@
   }
 
   .profile-pic {
-    width: 539px;
-    max-height: 602px;
-    height: auto;
+    height: 95vh;
     display: block;
+    object-fit: cover;
+    object-position: center;
   }
 
   .scroll-arrow {
@@ -87,7 +88,6 @@
     }
   }
 
-  /* Mobile & Tablet Styles */
   @media (max-width: 770px) {
     display: flex !important;
     flex-direction: column-reverse !important;
@@ -101,9 +101,8 @@
     .profile-pic {
       order: 1;
       display: block;
-      width: clamp(120px, 50vw, 300px);
-      max-width: 60%;
-      height: auto;
+      max-width: 78%;
+      // height: auto;
       margin: 0 auto;
     }
 
@@ -114,7 +113,6 @@
       h2,
       h1 {
         white-space: normal;
-        font-size: clamp(24px, 6vw, 32px);
       }
     }
 
@@ -127,6 +125,8 @@
 @media (max-width: 1270px) {
   #introduction {
     left: 40px;
+    margin-top: 75px;
+    height: auto;
   }
 }
 

@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkWithHref } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
-import { MainContentComponent } from "./main-content/main-content.component";
-import { FooterComponent } from "./footer/footer.component";
+import { FooterComponent } from './footer/footer.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { LanguageService } from './services/language.services';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -14,19 +12,11 @@ import { LanguageService } from './services/language.services';
     CommonModule,
     RouterOutlet,
     HeaderComponent,
+
     FooterComponent,
-    TranslateModule
+    TranslateModule,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  constructor(private languageService: LanguageService, private translate: TranslateService) {
-    const savedLang = localStorage.getItem('language') || 'en';
-    this.languageService.changeLanguage(savedLang);
-  }
-
-  changeLanguage(lang: string): void {
-    this.languageService.changeLanguage(lang);
-  }
-}
+export class AppComponent {}

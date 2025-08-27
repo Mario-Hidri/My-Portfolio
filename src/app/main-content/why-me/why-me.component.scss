@@ -228,12 +228,13 @@ button {
   }
 
   h2 {
-    text-align: c
+    text-align: c;
   }
 
   p {
     text-align: center;
     width: 60%;
+    font-size: 24px;
   }
 
   .whyMe {
@@ -300,22 +301,25 @@ button {
     align-items: flex-start;
     gap: 30px;
     margin-left: 98px;
+
+    span {
+      font-size: 32px;
+    }
   }
 }
 
 @media (min-width: 1600px) {
   #whyMe {
-    width: 1600px;           
-    left: 50%;               
-    transform: translateX(-50%); 
-    justify-content: space-between; 
+    width: 1600px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
   }
 
   .iAmLocated,
   .relocate,
   .workRemote,
   .suitcase {
-    margin-left: 0;          
+    margin-left: 0;
   }
 }
-

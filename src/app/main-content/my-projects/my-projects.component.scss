@@ -1,4 +1,4 @@
-h1{
+h1 {
   scroll-margin-top: 60px;
 }
 
@@ -9,7 +9,6 @@ h1{
   margin-left: 120px;
   margin-top: 60px;
   margin-bottom: 60px;
-
   gap: 40px;
   img {
     width: 588px;
@@ -58,7 +57,7 @@ h1{
   align-items: center;
   margin-top: 60px;
   margin-bottom: 60px;
-    margin-right: 105px;
+  // margin-right: 105px;
   gap: 50px;
   img {
     width: 588px;
@@ -83,6 +82,7 @@ h1{
   white-space: nowrap;
   cursor: pointer;
   transition: color 0.4s ease-in-out;
+  border: none;
 }
 
 #liveTest:hover {
@@ -163,6 +163,9 @@ h1 {
   #join,
   #polloLoco {
     flex-direction: column-reverse;
+    span {
+      font-size: 24px;
+    }
   }
 
   .polloDescription {
@@ -190,24 +193,23 @@ h1 {
 
 @media (min-width: 1600px) {
   #projects {
-    width: 1600px;       
-    margin-left: auto;    
+    width: 1600px;
+    margin-left: auto;
     margin-right: auto;
-    padding-top: 92px;   
+    padding-top: 92px;
   }
 
   #polloLoco,
   #join,
   #pokedex {
-    margin-left: 0;       
-    gap: 400px;            
-    justify-content: center; 
+    margin-left: 0;
+    gap: 400px;
+    justify-content: center;
   }
 
   .polloDescription,
   .joinDescription,
   .pokedexDescription {
-    align-items: center;   
+    align-items: center;
   }
 }
-
