@@ -129,3 +129,15 @@
     left: 40px;
   }
 }
+
+
+
+@media (min-width: 1600px) {
+  #introduction {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1600px; 
+  }
+}
+

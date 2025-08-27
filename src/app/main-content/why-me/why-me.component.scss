@@ -302,3 +302,20 @@ button {
     margin-left: 98px;
   }
 }
+
+@media (min-width: 1600px) {
+  #whyMe {
+    width: 1600px;           
+    left: 50%;               
+    transform: translateX(-50%); 
+    justify-content: space-between; 
+  }
+
+  .iAmLocated,
+  .relocate,
+  .workRemote,
+  .suitcase {
+    margin-left: 0;          
+  }
+}
+

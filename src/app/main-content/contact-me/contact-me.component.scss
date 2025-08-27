@@ -1,6 +1,7 @@
 section {
   padding-top: 12px;
   margin-left: 120px;
+    margin-right: 105px;
   scroll-margin-top: 115px;
 }
 
@@ -31,7 +32,7 @@ textarea:-webkit-autofill:focus {
 
 .container {
   max-width: 1440px;
-  margin: 12px auto 50px auto; /* centers horizontally */
+  margin: 12px auto 50px auto; 
   font-family: "Roboto Mono";
 }
 
@@ -426,5 +427,22 @@ input[type="submit"]:hover {
 
   .contactButton {
     justify-content: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  #contactMe {
+    width: 1600px;           
+    margin-left: auto;       
+    margin-right: auto;
+    padding-top: 12px;       
+    scroll-margin-top: 115px;
+  }
+
+  .container,
+  .emailAndPhone {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

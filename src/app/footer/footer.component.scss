@@ -3,6 +3,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   height: 196px;
+  margin-right: 105px;
   margin-left: 105px;
 }
 
@@ -183,15 +184,21 @@ footer {
   }
 
   .footer-mobile .footer-icons {
-  width: 40%;
+    width: 40%;
+  }
+
+  .footer-mobile .footer-icons a.gitImg,
+  .footer-mobile .footer-icons a.emailImg,
+  .footer-mobile .footer-icons a.linkedInImg {
+    width: 120px;
+    height: 80px;
+  }
 }
 
-.footer-mobile .footer-icons a.gitImg,
-.footer-mobile .footer-icons a.emailImg,
-.footer-mobile .footer-icons a.linkedInImg {
-  width: 120px;
-  height: 80px;
+@media (min-width: 1600px) {
+  footer {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-
-}
-

@@ -1,11 +1,11 @@
 nav {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%); 
   height: 92px;
   width: 100%;
   max-width: 1600px;
-  margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,6 +15,13 @@ nav {
     rgba(11, 4, 45, 0.2) 118.69%
   );
   z-index: 999;
+}
+
+
+.page-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .navTags {
@@ -35,7 +42,7 @@ a {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  color: #E15544;
+  color: #e15544;
 
   &:hover {
     cursor: pointer;
@@ -163,8 +170,6 @@ a {
     justify-content: center;
   }
 
-
-
   .navTags {
     width: 95%;
     justify-content: space-between;
@@ -176,7 +181,7 @@ a {
     display: none;
   }
 
-    .flex {
+  .flex {
     position: absolute;
     left: -9999px;
   }
