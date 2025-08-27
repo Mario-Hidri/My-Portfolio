@@ -30,6 +30,10 @@ export class ContactFormComponent {
 
   mailTest = false;
 
+  // 👉 neue States für Meldungen
+  successMessage = '';
+  errorMessage = '';
+
   post = {
     endPoint: 'https://mario-hidri.de/sendMail.php',
     body: (payload: any) => payload,
@@ -50,12 +54,30 @@ export class ContactFormComponent {
           this.post.options
         )
         .subscribe({
-          next: () => ngForm.resetForm(),
-          error: (err) => console.error(err),
+          next: () => {
+            this.successMessage = '✅ Thank you! Your email was sent successfully.';
+            this.errorMessage = '';
+            ngForm.resetForm();
+
+            // Meldung nach 5 Sekunden wieder ausblenden
+            setTimeout(() => (this.successMessage = ''), 5000);
+          },
+          error: (err) => {
+            console.error(err);
+            this.errorMessage = '❌ Oops! Something went wrong. Please try again.';
+            this.successMessage = '';
+
+            // Error nach 5 Sekunden ausblenden
+            setTimeout(() => (this.errorMessage = ''), 5000);
+          },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      this.successMessage = '✅ (Test Mode) Form submitted successfully.';
+      this.errorMessage = '';
       ngForm.resetForm();
+
+      setTimeout(() => (this.successMessage = ''), 5000);
     }
   }
 }

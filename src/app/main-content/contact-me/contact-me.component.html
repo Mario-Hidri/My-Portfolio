@@ -109,6 +109,14 @@
           [disabled]="!contactForm.valid"
         />
       </div>
+
+      <!-- Success / Error Messages -->
+      <p *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+      </p>
+      <p *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </p>
     </form>
   </div>
 

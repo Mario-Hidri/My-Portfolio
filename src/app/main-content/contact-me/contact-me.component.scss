@@ -77,6 +77,38 @@ textarea {
   margin-top: 8px;
 }
 
+.error {
+  color: #e15544;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+.success-message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: rgba(2, 244, 191, 0.1);
+  color: #02f4bf;
+  border: 1px solid #02f4bf;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+
+.error-message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: rgba(225, 85, 68, 0.1);
+  color: #e15544;
+  border: 1px solid #e15544;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+
+
 .privacy {
   display: flex;
   align-items: center;
