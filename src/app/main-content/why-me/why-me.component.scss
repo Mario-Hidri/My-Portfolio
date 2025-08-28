@@ -3,13 +3,12 @@ section {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 1284px;
   position: relative;
   margin-top: 100px;
-  left: 105px;
   gap: 100px;
   height: 552px;
   scroll-margin-top: 110px;
+  padding: 20px;
 }
 
 .none {
@@ -62,6 +61,8 @@ p {
 }
 .iAmLocated {
   display: flex;
+  justify-content: center;
+  align-self: center;
   gap: 64px;
   align-items: center;
   margin-left: 124px;
@@ -219,6 +220,19 @@ button {
 }
 
 @media (max-width: 770px) {
+  button {
+    width: 300px;
+    font-size: 42px;
+    height: auto;
+    line-height: normal;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 100px;
+    line-height: normal;
+    margin-top: 12px;
+  }
   .profPic2 {
     display: none;
   }
@@ -228,13 +242,15 @@ button {
   }
 
   h2 {
-    text-align: c;
+    text-align: center;
+    font-size: 80px;
   }
 
   p {
     text-align: center;
-    width: 60%;
-    font-size: 24px;
+    width: 1000px;
+    font-size: 48px;
+    line-height: normal;
   }
 
   .whyMe {
@@ -303,7 +319,7 @@ button {
     margin-left: 98px;
 
     span {
-      font-size: 32px;
+      font-size: 48px;
     }
   }
 }

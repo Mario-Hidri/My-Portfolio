@@ -1,12 +1,14 @@
-h1 {
-  scroll-margin-top: 60px;
+.projectsDiv {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
 }
 
 #polloLoco,
 #join {
   display: flex;
   align-items: center;
-  margin-left: 120px;
   margin-top: 60px;
   margin-bottom: 60px;
   gap: 40px;
@@ -57,7 +59,6 @@ h1 {
   align-items: center;
   margin-top: 60px;
   margin-bottom: 60px;
-  // margin-right: 105px;
   gap: 50px;
   img {
     width: 588px;
@@ -82,7 +83,6 @@ h1 {
   white-space: nowrap;
   cursor: pointer;
   transition: color 0.4s ease-in-out;
-  border: none;
 }
 
 #liveTest:hover {
@@ -111,10 +111,13 @@ h1 {
   color: #02f4bf;
 }
 
-.buttonClass {
+.buttonClassPollo,
+.buttonClassPokedex,
+.buttonClassJoin {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-top: 10px;
 }
 
 h1 {
@@ -133,14 +136,11 @@ h1 {
   }
   h1 {
     width: 1140px;
-    margin-left: 40px;
   }
   #pokedex {
     margin-left: 105px;
   }
-}
 
-@media (max-width: 1300px) {
   #polloLoco {
     margin-left: 40px;
   }
@@ -155,16 +155,64 @@ h1 {
 }
 
 @media (max-width: 770px) {
+  h2 {
+    font-size: 64px;
+  }
+  h1 {
+    margin-top: 12px;
+    font-size: 100px;
+  }
+
+  .titleTech {
+    width: 1000px;
+    align-self: center;
+    align-items: center;
+  }
+  .projectsDiv {
+    gap: 60px;
+    display: grid;
+  }
+
+  .polloDescription,
+  .joinDescription,
+  .pokedexDescription {
+    span {
+      font-size: 40px;
+      line-height: normal;
+      width: 1000px;
+    }
+  }
+  .buttonClassPollo {
+    margin-top: 710px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .buttonClassPokedex {
+    margin-top: 755px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .buttonClassJoin {
+    margin-top: 800px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
   #projects {
-    padding-top: 600px;
+    padding-top: 800px;
   }
 
   #pokedex,
   #join,
   #polloLoco {
     flex-direction: column-reverse;
-    span {
-      font-size: 24px;
+
+    img {
+      margin-top: 140px;
+      width: 90%;
+      height: 90%;
     }
   }
 
@@ -188,28 +236,5 @@ h1 {
   .joinDescription h2 {
     display: flex;
     justify-content: center;
-  }
-}
-
-@media (min-width: 1600px) {
-  #projects {
-    width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 92px;
-  }
-
-  #polloLoco,
-  #join,
-  #pokedex {
-    margin-left: 0;
-    gap: 400px;
-    justify-content: center;
-  }
-
-  .polloDescription,
-  .joinDescription,
-  .pokedexDescription {
-    align-items: center;
   }
 }

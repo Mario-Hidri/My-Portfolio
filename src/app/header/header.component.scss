@@ -1,13 +1,15 @@
 nav {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%); 
+  left: 0;
+  right: 0;
   height: 92px;
   width: 100%;
   max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  gap: 400px;
   align-items: center;
   background: linear-gradient(
     180deg,
@@ -15,25 +17,18 @@ nav {
     rgba(11, 4, 45, 0.2) 118.69%
   );
   z-index: 999;
-}
-
-
-.page-wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
 .active-lang {
-  color: #02f4bf !important;  
+  color: #02f4bf !important;
   font-weight: bold;
 }
-
 
 .navTags {
   display: flex;
   align-items: center;
-  gap: 140px;
+  gap: 40px;
   white-space: nowrap;
 }
 
@@ -59,13 +54,11 @@ a {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 100px;
-  margin-left: 75px;
+  gap: 10px;
 }
 
 .languageSeperator {
-  margin: 0 12px;
+  margin: 0 8px;
   height: 20px;
 }
 
@@ -73,7 +66,6 @@ a {
   background: none;
   border: none;
   padding: 0;
-  margin-right: 20px;
   cursor: pointer;
 
   img {
@@ -91,15 +83,14 @@ a {
   top: 0;
   right: 0;
   background-color: #0b042d;
-  width: 300px;
-  height: 100vh;
+  width: 260px;
+  height: 50vh;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
   border-bottom-left-radius: 30px;
-
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
@@ -124,11 +115,10 @@ a {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-right: 20px;
 
     img {
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -136,13 +126,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 36px;
     margin-top: 40px;
-    margin-bottom: 40px;
 
     a {
       font-family: "Roboto Mono", monospace;
-      font-size: 20px;
+      font-size: 36px;
       text-decoration: none;
       white-space: nowrap;
 
@@ -158,27 +147,25 @@ a {
       margin-top: 20px;
 
       a {
-        font-size: 16px;
+        font-size: 24px;
       }
     }
   }
 }
 
-/* Responsive Rules */
+/* Responsive */
 @media (max-width: 1000px) {
-  .logo {
-    margin-left: 40px !important;
+  .navTags {
+    gap: 20px;
   }
 }
 
 @media (max-width: 840px) {
   nav {
-    justify-content: center;
-  }
-
-  .navTags {
-    width: 95%;
     justify-content: space-between;
+  }
+  .navTags {
+    gap: 10px;
   }
 }
 
@@ -186,12 +173,9 @@ a {
   .navTags a {
     display: none;
   }
-
   .flex {
-    position: absolute;
-    left: -9999px;
+    display: none;
   }
-
   .burgerButton {
     display: block;
   }

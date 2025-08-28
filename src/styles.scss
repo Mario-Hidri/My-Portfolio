@@ -37,8 +37,6 @@ body {
   letter-spacing: 0.05em !important;
   color: #e15544 !important;
   margin: 0px!important;
-  margin-right: 20px !important;
-  margin-left: 120px !important;
 }
 
 
@@ -76,9 +74,11 @@ body {
     format("truetype");
 }
 
-@media (max-width: 1300px) {
-   body{
-    max-width: 1140px;
-  }
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
 }
+
+
 

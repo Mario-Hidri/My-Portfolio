@@ -1,8 +1,8 @@
 section {
   height: 423px;
-  width: 1284px;
-  margin-left: 105px;
-  padding-top: 120px;
+
+  padding: 20px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -103,7 +103,7 @@ h1 {
   }
 }
 
-.secretBox,
+.secretBox:hover p,
 .secretBox1:hover p {
   opacity: 1;
 }
@@ -130,11 +130,25 @@ h1 {
     width: 400px;
     align-items: center;
     margin-left: 400px;
+    margin-top: 440px;
   }
 
+  h1 {
+    font-size: 100px;
+    line-height: normal;
+    margin-top: 12px;
+  }
+
+  .flexVertical {
     img {
-    width: 80px;
-    height: 80px;
+      width: 90px;
+      height: 90px;
+    }
+
+    span {
+      font-size: 42px;
+      line-height: normal;
+    }
   }
 
   .cloneButton {
@@ -190,8 +204,8 @@ h1 {
     color: #02f4bf;
     font-family: "Roboto Mono";
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 32px;
+    line-height: normal;
     text-align: left;
   }
 
@@ -202,11 +216,11 @@ h1 {
   }
 
   .secretBox p {
-    top: 150%;
-    width: 400px;
+    top: 180%;
+    width: 300px;
     height: 80px;
     padding: 10px;
-    left: -143px;
+    left: -110px;
   }
 
   .secretBox:hover .arrow,
@@ -215,19 +229,29 @@ h1 {
   }
 
   button {
-    margin-top: 130px;
+    margin-top: 42px;
+
+    width: 300px;
+    font-size: 42px;
+    height: auto;
+    line-height: normal;
+    font-weight: 500;
+  }
+
+  #mySkills:has(.secretBox:hover) .cloneButton {
+    display: none;
   }
 }
 
 @media (min-width: 1600px) {
   #mySkills {
-    width: 1600px;          
-    margin-left: auto;      
-    margin-right: auto;      
-    padding-top: 120px;      
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 120px;
   }
 
   #mySkills .allSkillsContainer {
-    justify-content: center; 
+    justify-content: center;
   }
 }

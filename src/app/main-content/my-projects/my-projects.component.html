@@ -1,46 +1,75 @@
-<h1 id="projects" class="title">{{ 'PROJECTS.TITLE' | translate }}</h1>
+<h1 id="projects" class="title">{{ "PROJECTS.TITLE" | translate }}</h1>
+<div class="projectsDiv">
+  <section id="polloLoco">
+    <img src="/assets/img/elPolloLoco.png" alt="" />
+    <div class="polloDescription">
+      <div class="titleTech">
+        <h2>{{ "PROJECTS.POLLO.NAME" | translate }}</h2>
+        <span>{{ "PROJECTS.POLLO.TECH" | translate }}</span>
+      </div>
+      <span>{{ "PROJECTS.POLLO.DESCRIPTION" | translate }}</span>
+      <div class="buttonClassPollo">
+        <button
+          id="gitHub"
+          (click)="openLiveDemo('https://github.com/Mario-Hidri/ElPolloLoco')"
+        >
+          {{ "PROJECTS.GITHUB" | translate }}
+        </button>
+        <button
+          id="liveTest"
+          (click)="
+            openLiveDemo(
+              'https://mario-hidri.developerakademie.net/EL_POLLO_LOCO/'
+            )
+          "
+        >
+          {{ "PROJECTS.LIVE" | translate }}
+        </button>
+      </div>
+    </div>
+  </section>
 
-<section id="polloLoco">
-  <img src="/assets/img/elPolloLoco.png" alt="" />
-  <div class="polloDescription">
-    <div>
-      <h2>{{ 'PROJECTS.POLLO.NAME' | translate }}</h2>
-      <span>{{ 'PROJECTS.POLLO.TECH' | translate }}</span>
+  <section id="pokedex">
+    <img src="/assets/img/pokemon.jpg" />
+    <div class="pokedexDescription">
+      <div class="titleTech">
+        <h2>{{ "PROJECTS.POKEDEX.NAME" | translate }}</h2>
+        <span>{{ "PROJECTS.POKEDEX.TECH" | translate }}</span>
+      </div>
+      <span>{{ "PROJECTS.POKEDEX.DESCRIPTION" | translate }}</span>
+      <div class="buttonClassPokedex">
+        <button
+          id="gitHub"
+          (click)="openLiveDemo('https://github.com/Mario-Hidri/Pokedex')"
+        >
+          {{ "PROJECTS.GITHUB" | translate }}
+        </button>
+        <button
+          id="liveTest"
+          (click)="
+            openLiveDemo('https://mario-hidri.developerakademie.net/Pokedex/')
+          "
+        >
+          {{ "PROJECTS.LIVE" | translate }}
+        </button>
+      </div>
     </div>
-    <span>{{ 'PROJECTS.POLLO.DESCRIPTION' | translate }}</span>
-    <div class="buttonClass">
-      <button id="gitHub" (click)="openLiveDemo('https://github.com/Mario-Hidri/ElPolloLoco')">{{ 'PROJECTS.GITHUB' | translate }}</button>
-      <button id="liveTest" (click)="openLiveDemo('https://mario-hidri.developerakademie.net/EL_POLLO_LOCO/')">{{ 'PROJECTS.LIVE' | translate }}</button>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="pokedex">
-  <img src="/assets/img/pokemon.jpg" />
-  <div class="pokedexDescription">
-    <div>
-      <h2>{{ 'PROJECTS.POKEDEX.NAME' | translate }}</h2>
-      <span>{{ 'PROJECTS.POKEDEX.TECH' | translate }}</span>
+  <section id="join">
+    <img src="/assets/img/join.jpg" alt="" />
+    <div class="joinDescription">
+      <div class="titleTech">
+        <h2>{{ "PROJECTS.JOIN.NAME" | translate }}</h2>
+        <span>{{ "PROJECTS.JOIN.TECH" | translate }}</span>
+      </div>
+      <span>{{ "PROJECTS.JOIN.DESCRIPTION" | translate }}</span>
+      <div class="buttonClassJoin">
+        <button id="gitHub">{{ "PROJECTS.GITHUB" | translate }}</button>
+        <button id="liveTest" (click)="openLiveDemo('')">
+          {{ "PROJECTS.LIVE" | translate }}
+        </button>
+      </div>
     </div>
-    <span>{{ 'PROJECTS.POKEDEX.DESCRIPTION' | translate }}</span>
-    <div class="buttonClass">
-      <button id="gitHub" (click)="openLiveDemo('https://github.com/Mario-Hidri/Pokedex')">{{ 'PROJECTS.GITHUB' | translate }}</button>
-      <button id="liveTest" (click)="openLiveDemo('https://mario-hidri.developerakademie.net/Pokedex/')">{{ 'PROJECTS.LIVE' | translate }}</button>
-    </div>
-  </div>
-</section>
-
-<section id="join">
-  <img src="/assets/img/join.jpg" alt="" />
-  <div class="joinDescription">
-    <div>
-      <h2>{{ 'PROJECTS.JOIN.NAME' | translate }}</h2>
-      <span>{{ 'PROJECTS.JOIN.TECH' | translate }}</span>
-    </div>
-    <span>{{ 'PROJECTS.JOIN.DESCRIPTION' | translate }}</span>
-    <div class="buttonClass">
-      <button id="gitHub">{{ 'PROJECTS.GITHUB' | translate }}</button>
-      <button id="liveTest" (click)="openLiveDemo('')">{{ 'PROJECTS.LIVE' | translate }}</button>
-    </div>
-  </div>
-</section>
+  </section>
+</div>

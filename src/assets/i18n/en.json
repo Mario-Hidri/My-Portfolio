@@ -45,7 +45,7 @@
     "POKEDEX": {
       "NAME": "Pokédex",
       "TECH": "JavaScript | HTML | CSS | API",
-      "DESCRIPTION": "Explore, search, and view Pokémon stats using an API-based interface. Discover each Pokémon's abilities and traits with an interactive and user-friendly design."
+      "DESCRIPTION": "Explore, search, and view Pokémon stats using an API-based interface. Discover each Pokémon's abilities."
     },
     "JOIN": {
       "NAME": "Join",

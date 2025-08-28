@@ -184,7 +184,23 @@ footer {
   }
 
   .footer-mobile .footer-icons {
-    width: 40%;
+    width: 80%;
+  }
+
+  .footer-logo {
+    font-size: 80px !important;
+  }
+
+  .footer-copy {
+    font-size: 30px !important;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  .footer-links a {
+    font-size: 30px !important;
+    margin-top: 10px;
+    margin-bottom: 12px;
   }
 
   .footer-mobile .footer-icons a.gitImg,
