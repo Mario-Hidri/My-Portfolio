@@ -30,7 +30,6 @@ export class ContactFormComponent {
 
   mailTest = false;
 
-  // 👉 neue States für Meldungen
   successMessage = '';
   errorMessage = '';
 
@@ -59,16 +58,16 @@ export class ContactFormComponent {
             this.errorMessage = '';
             ngForm.resetForm();
 
-            // Meldung nach 5 Sekunden wieder ausblenden
-            setTimeout(() => (this.successMessage = ''), 5000);
+            // Meldung nach 4 Sekunden wieder ausblenden
+            setTimeout(() => (this.successMessage = ''), 4000);
           },
           error: (err) => {
             console.error(err);
             this.errorMessage = '❌ Oops! Something went wrong. Please try again.';
             this.successMessage = '';
 
-            // Error nach 5 Sekunden ausblenden
-            setTimeout(() => (this.errorMessage = ''), 5000);
+            // Error nach 4 Sekunden ausblenden
+            setTimeout(() => (this.errorMessage = ''), 4000);
           },
           complete: () => console.info('send post complete'),
         });

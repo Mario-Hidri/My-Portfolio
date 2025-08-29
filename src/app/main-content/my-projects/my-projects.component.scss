@@ -59,6 +59,8 @@
   align-items: center;
   margin-top: 60px;
   margin-bottom: 60px;
+  margin-right: 40px;
+
   gap: 50px;
   img {
     width: 588px;
@@ -167,6 +169,7 @@ h1 {
     width: 1000px;
     align-self: center;
     align-items: center;
+    text-align: center;
   }
   .projectsDiv {
     gap: 60px;
@@ -238,3 +241,5 @@ h1 {
     justify-content: center;
   }
 }
+
+

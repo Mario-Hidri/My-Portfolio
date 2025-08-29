@@ -92,7 +92,7 @@
         />
         <label>
           {{ "CONTACT.PRIVACY_PREFIX" | translate }}
-          <a href="/privacy-policy">
+          <a href="/privacy-policy" target="_blank">
             {{ "CONTACT.PRIVACY_LINK" | translate }}
           </a>
           {{ "CONTACT.PRIVACY_SUFFIX" | translate }}
@@ -102,19 +102,14 @@
         {{ "CONTACT.ERROR_PRIVACY" | translate }}
       </span>
 
-      <div class="contactButton">
-        <button type="submit" [disabled]="!contactForm.valid">
-          {{ "CONTACT.SEND_BUTTON" | translate }}
-        </button>
-      </div>
+  <div class="contactButton">
+  <button 
+    type="submit" 
+    [disabled]="!contactForm.valid">
+    {{ 'CONTACT.SEND_BUTTON' | translate }}
+  </button>
+</div>
 
-      <!-- Success / Error Messages -->
-      <p *ngIf="successMessage" class="success-message">
-        {{ successMessage }}
-      </p>
-      <p *ngIf="errorMessage" class="error-message">
-        {{ errorMessage }}
-      </p>
     </form>
   </div>
 
